@@ -1,6 +1,7 @@
 # Get user input - TBDepricated
+println()
 print("Text: ")
-text = readline()j
+text = readline()
 print("Proceed with Frequency Analysis? [Press Enter]")
 readline()
 
@@ -8,7 +9,7 @@ readline()
 alphabet = "abcdefghijklmnopqrstuvwxyz"
 
 # This is all the code we need to count all the stuff. Comprehension?
-counted_dict =  {}
+counted_dict = {any[]}
 for i in length(alphabet)
     counted_dict[alphabet[i]] = count(alphabet[i], text)
 end
@@ -19,4 +20,4 @@ println(counted_dict)
 
 # Sorted out.
 println("Dictionary [Sorted by size]:")
-println(sort!(counted_dict, by = x->x[1]))
+println(sort!(collect(counted_dict), by = x->x[1]))
