@@ -1,8 +1,3 @@
-<<<<<<< HEAD
-<<<<<<< Updated upstream
-=======
-=======
->>>>>>> 27390f6a354a7a6b28f0f84e317adf959824bc11
 function fa(input, alphabet)
 
     text = input
@@ -25,7 +20,6 @@ end
 while true
     println("")
     println("Text:")
-<<<<<<< HEAD
     human_input = readline()
     println("Alphabet [leave blank for default]:")
     human_alphabet = readline()
@@ -34,8 +28,3 @@ while true
     end
     fa(human_input, human_alphabet)
 end
->>>>>>> Stashed changes
-=======
-    fa(readline(), "abcdefghijklmnopqrstuvwxyz")
-end
->>>>>>> 27390f6a354a7a6b28f0f84e317adf959824bc11
