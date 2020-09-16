@@ -22,7 +22,9 @@ These are `coincidence` and `fa`.
 `coincidence` takes 2 arguments: `text` and `alphabet_array`.  
 `text`: The string with the text you're analysing.  
 `alphabet_array`: The array, or in the case of how `fa` uses `coincidence` it is a string with substrings, is a 1d array of strings (not chars) which `coincidence` uses to calculate the index of coincidence.  
+`coincidence` returns an int containing the Index of Coincidence.  
 ##### fa
 `fa` takes 2 arguments: `input` and `alphabet`.  
 `input`: A string with your text in it.  
 `alphabet`: A string with your alphabet in it.  
+`fa` returns an unsorted dictionary containing the probability of picking a letter when you pick a letter at random from the text as a value between 0 and 1.  
