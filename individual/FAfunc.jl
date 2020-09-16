@@ -22,16 +22,6 @@ function fa(input, alphabet)
         counted[i] = count(i, text) / length(text)
     end
 
-    # Human Sorted out.
-    println("")
-    println("Count [Sorted by size]:")
-    for i in sort!(collect(counted), by = x->x[2], rev = true)
-        println(i)
-    end
-
-    println()
-    println("Index of Coincidence: ", coincidence(text, alphabet_array))
-
     # Computer out:
     return counted
 
