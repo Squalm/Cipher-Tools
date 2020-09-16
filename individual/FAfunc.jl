@@ -1,12 +1,12 @@
 function coincidence(text, alphabet_array)
 
-    # Find the index of coincidence
+    # Git Sigma
     sigma = 0
     for letter in alphabet_array
         sigma += (count(letter, text) * (count(letter, text) - 1))
     end
 
-    # Computer out:
+    # Computer out (and calc. Index of Coincidence):
     return sigma / length(text) / (length(text) - 1) / length(alphabet_array)
 
 end

@@ -11,7 +11,7 @@ Cipher tools is collection of all the tools I've made for codebreaking. They wer
 
 ## More Details.
 ### Frequency Analysis
-Last Updated: 16/09/20
+Last Updated: 16/09/20  
 Associated files: [FAhumans.jl](https://github.com/Squalm/Cipher-Tools/blob/master/FAhumans.jl) & [individual\\FAfunc.jl](https://github.com/Squalm/Cipher-Tools/blob/master/individual/FAfunc.jl).  
 #### What does it do?
 This frequency analysis program can take a custom alphabet and returns the frequency of each letter as a value. It also shows the Index of Coincidence of the text.  
