@@ -1,3 +1,20 @@
+function coincidence(text, alphabet_array)
+    
+    # Find the index of coincidence
+    coincidence = 0
+    for letter in alphabet_array
+        coincidence += (count(letter, text) * (count(letter, text) - 1)) / (length(text) * (length(text) - 1))
+    end
+
+    # Human out:
+    println()
+    println("Index of Coicidence: ", string(coincidence))
+
+    # Computer out:
+    return coincidence
+
+end
+
 function fa(input, alphabet)
 
     text = input
@@ -16,6 +33,8 @@ function fa(input, alphabet)
         println(i)
     end
 
+    coincidence(text, alphabet_array)
+
     # Computer out:
     return counted
 
@@ -26,14 +45,11 @@ while true
     println("")
     println("Text [leave blank to break]:")
     human_input = readline()
-    if human_input == ""
-        break
-    end
+    human_input == "" ? break :
     println("Alphabet [leave blank for default]:")
     human_alphabet = readline()
-    if human_alphabet == ""
-        human_alphabet = "abcdefghijklmnopqrstuvwxyz"
-    end
+    human_alphabet == "" ? human_alphabet = "abcdefghijklmnopqrstuvwxyz" :
+    println("")
     fa(human_input, human_alphabet)
-    
+
 end
