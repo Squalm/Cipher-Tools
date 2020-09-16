@@ -22,6 +22,7 @@ function fa(input, alphabet)
 end
 
 while true
+
     println("")
     println("Text [leave blank to break]:")
     human_input = readline()
@@ -34,4 +35,5 @@ while true
         human_alphabet = "abcdefghijklmnopqrstuvwxyz"
     end
     fa(human_input, human_alphabet)
+    
 end
