@@ -1,17 +1,13 @@
 function coincidence(text, alphabet_array)
-    
+
     # Find the index of coincidence
-    coincidence = 0
+    sigma = 0
     for letter in alphabet_array
-        coincidence += (count(letter, text) * (count(letter, text) - 1)) / (length(text) * (length(text) - 1))
+        sigma += (count(letter, text) * (count(letter, text) - 1))
     end
 
-    # Human out:
-    println()
-    println("Index of Coicidence: ", string(coincidence))
-
     # Computer out:
-    return coincidence
+    return sigma / length(text) / (length(text) - 1) / length(alphabet_array)
 
 end
 
@@ -33,7 +29,8 @@ function fa(input, alphabet)
         println(i)
     end
 
-    coincidence(text, alphabet_array)
+    println()
+    println("Index of Coincidence: ", coincidence(text, alphabet_array))
 
     # Computer out:
     return counted
