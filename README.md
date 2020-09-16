@@ -6,5 +6,5 @@ Cipher tools is collection of all the tools I've made for codebreaking. They wer
 
 ## List of Tools.
 <ul>
-  <li>none right now</li>
+  <li>Basic Frequency Analysis.</li>
 </ul>
