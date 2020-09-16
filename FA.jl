@@ -9,18 +9,25 @@ function fa(input, alphabet)
         counted[i] = count(i, text) / length(text)
     end
 
-    # Sorted out.
+    # Human Sorted out.
     println("")
     println("Count [Sorted by size]:")
     for i in sort!(collect(counted), by = x->x[2], rev = true)
         println(i)
     end
+
+    # Computer out:
+    return counted
+
 end
 
 while true
     println("")
-    println("Text:")
+    println("Text [leave blank to break]:")
     human_input = readline()
+    if human_input == ""
+        break
+    end
     println("Alphabet [leave blank for default]:")
     human_alphabet = readline()
     if human_alphabet == ""
