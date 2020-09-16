@@ -7,23 +7,27 @@ readline()
 
 # Default alphabet - TBDepricated
 alphabet = "abcdefghijklmnopqrstuvwxyz"
-alphabet_array = Array{String}(undef, length(alphabet))
-for c in range(1, length = length(alphabet))
-    alphabet_array = c
-end
+alphabet_array = split(alphabet, "")
+
 # println(typeof(alphabet))
 
 # This is all the code we need to count all the stuff. Comprehension?
-counted_dict = ([])
+counted = Dict()
+# count = []
 
-for i in range(1, length = length(alphabet_array))
-    counted_dict[alphabet_array[i]] = count(alphabet_array[i], text)
+for i in alphabet_array
+    counted[i] = count(i, text) / length(text)
 end
 
 # Unsorted out.
-println("Dictionary:")
-println(counted_dict)
+# println("Count:")
+# println(sort!(collect(counted), by = x->x[1]))
 
 # Sorted out.
-println("Dictionary [Sorted by size]:")
-println(sort!(collect(counted_dict), by = x->x[1]))
+println("")
+println("Count [Sorted by size]:")
+# println(sort!(collect(counted), by = x->x[2], rev = true))
+
+for i in sort!(collect(counted), by = x->x[2], rev = true)
+    println(i)
+end
