@@ -15,9 +15,26 @@ function coincidence(text, alphabet)
 end
 
 # Columnar IoC
-function columnarCoincidence(ioc, alphabet, columns)
+function columnarCoincidence(text, alphabet, columns)
+
+    # Get an alphabet only text.
+    # [To do] Make this into its own function later
+    alphabet_only_text = ""
+    for letter in text
+        if letter in alphabet
+            alphabet_only_text[end + 1] = letter
+        end
+    end
+    println(alphabet_only_text)
 
     # Make an array containing each column
+    text_indexed = [1:length(text)]
+    split_by_column
+    for i in text_indexed
+        #if text[i] ==
+
+        #end
+    end
 
 end
 
