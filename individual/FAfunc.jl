@@ -1,3 +1,4 @@
+# Index of Coincidence
 function coincidence(text, alphabet_array)
 
     # Git Sigma
@@ -11,6 +12,7 @@ function coincidence(text, alphabet_array)
 
 end
 
+# Basic Frequency Analysis
 function fa(input, alphabet)
 
     text = input
