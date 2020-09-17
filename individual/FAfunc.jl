@@ -1,5 +1,7 @@
 # Index of Coincidence
-function coincidence(text, alphabet_array)
+function coincidence(text, alphabet)
+
+    alphabet_array = split(alphabet, "")
 
     # Git Sigma
     sigma = 0
@@ -9,6 +11,13 @@ function coincidence(text, alphabet_array)
 
     # Computer out (and calc. Index of Coincidence):
     return sigma / length(text) / (length(text) - 1) / length(alphabet_array)
+
+end
+
+# Columnar IoC
+function columnarCoincidence(ioc, alphabet, columns)
+
+    # Make an array containing each column
 
 end
 
