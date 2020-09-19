@@ -1,13 +1,18 @@
 # Caesar shift function
 function caesarshift(text, alphabet, shift)
 
-    numbers = Array{length(alphabet), Int64}(0, 1)
+    numbers = []
     shifted = ""
-    for i in range(1, length = length(text))
-        numbers[i] = findfirst(x -> x == text[i], alphabet)
+    for letter in text
+        for u in range(1, length = length(alphabet))
+            if alphabet[u] == letter
+                push!(numbers, u)
+                break
+            end
+        end
     end
 
-    return shifted
+    return numbers
 
 end
 
