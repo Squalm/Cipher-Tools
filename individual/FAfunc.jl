@@ -15,6 +15,7 @@ function coincidence(text, alphabet)
 end
 
 # Columnar IoC
+#=
 function columnarCoincidence(text, alphabet, columns)
 
     # Get an alphabet only text.
@@ -37,6 +38,7 @@ function columnarCoincidence(text, alphabet, columns)
     end
 
 end
+=#
 
 # Basic Frequency Analysis
 function fa(input, alphabet)
