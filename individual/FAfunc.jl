@@ -3,7 +3,7 @@ function coincidence(text, alphabet)
 
     alphabet_array = split(alphabet, "")
 
-    # Git Sigma
+    # Get Sigma
     sigma = 0
     for letter in alphabet_array
         sigma += (count(letter, text) * (count(letter, text) - 1))
