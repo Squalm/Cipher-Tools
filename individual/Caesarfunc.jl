@@ -27,10 +27,11 @@ end
 
 function caesarbrute(text, alphabet)
 
+    shifts = []
     for i in range(1, length = length(alphabet))
-        println(caesarshift(text, alphabet, i))
+        push!(shifts, caesarshift(text, alphabet, i))
     end
 
-end
+    return shifts
 
-println(caesarbrute(readline(), "abcdefghijklmnopqrstuvwxyz"))
+end
