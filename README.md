@@ -18,17 +18,17 @@ Associated files: [FAhumans.jl](https://github.com/Squalm/Cipher-Tools/blob/mast
 This frequency analysis program can take a custom alphabet and returns the frequency of each letter as a value. It also shows the Index of Coincidence of the text.  
 #### How to use it? (For programmers!)
 *FAfunc.jl* contains 2 functions:  
-These are `coincidence` and `fa`.  
-##### coincidence
-`coincidence` takes 2 arguments: `text` and `alphabet_array`.  
+These are `coincidence()` and `fa()`.  
+##### coincidence()
+`coincidence()` takes 2 arguments: `text` and `alphabet_array`.  
 `text`: The string with the text you're analysing.  
 `alphabet`: A string with your alphabet in it.
-`coincidence` returns an int containing the Index of Coincidence.  
-##### fa
-`fa` takes 2 arguments: `input` and `alphabet`.  
+`coincidence()` returns an int containing the Index of Coincidence.  
+##### fa()
+`fa()` takes 2 arguments: `input` and `alphabet`.  
 `input`: A string with your text in it.  
 `alphabet`: A string with your alphabet in it.  
-`fa` returns an unsorted dictionary containing the probability of picking a letter when you pick a letter at random from the text as a value between 0 and 1.  
+`fa()` returns an unsorted dictionary containing the probability of picking a letter when you pick a letter at random from the text as a value between 0 and 1.  
 ### Caesar Shift
 Last updated: 20.09.2020  
 Associated files: [individual\\Caesarfunc.jl](https://github.com/Squalm/Cipher-Tools/blob/master/individual/Caesarfunc.jl) & [Caesarhumans.jl](https://github.com/Squalm/Cipher-Tools/blob/master/Caesarhumans.jl).
