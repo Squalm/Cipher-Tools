@@ -1,6 +1,7 @@
 # Caesar shift function
 function caesarshift(text, alphabet, shift)
 
+    # Turn to numbers
     numbers = []
     shifted = ""
     for letter in text
@@ -12,8 +13,15 @@ function caesarshift(text, alphabet, shift)
         end
     end
 
+    # Shift nmubers
+    numbers = [x + shift > length(alphabet) ? x + shift - length(alphabet) : x + shift for x in numbers]
 
-    return numbers
+    shifted = ""
+    for i in numbers
+        shifted *= alphabet[i]
+    end
+
+    return shifted
 
 end
 
