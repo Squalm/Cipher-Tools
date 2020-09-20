@@ -28,9 +28,9 @@ end
 function caesarbrute(text, alphabet)
 
     for i in range(1, length = length(alphabet))
-        caesarshift(text, alphabet, i)
+        println(caesarshift(text, alphabet, i))
     end
 
 end
 
-println(caesarshift(readline(), "abcdefghijklmnopqrstuvwxyz", 2))
+println(caesarbrute(readline(), "abcdefghijklmnopqrstuvwxyz"))
