@@ -25,4 +25,12 @@ function caesarshift(text, alphabet, shift)
 
 end
 
+function caesarbrute(text, alphabet)
+
+    for i in range(1, length = length(alphabet))
+        caesarshift(text, alphabet, i)
+    end
+
+end
+
 println(caesarshift(readline(), "abcdefghijklmnopqrstuvwxyz", 2))
