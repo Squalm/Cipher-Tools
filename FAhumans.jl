@@ -21,11 +21,4 @@ while true
     println("\nIndex of Coincidence: ")
     println(coincidence(human_input, split(human_alphabet, "")))
 
-    # To do:
-    # Analyse: Index of coincidence within acceptable range given length
-    # Analyse: Columnar IoC
-    # Analyse: Trigrams
-    # Analsye: Comparison. Standard Distributions vs. Text
-    
-
 end
