@@ -2,8 +2,9 @@ include("individual\\Caesarfunc.jl")
 
 while true
 
-    println("\nText to shift: ")
+    println("\nText to shift [leave blank to break]: ")
     human_input = readline()
+    human_input == "" ? break :
     println("\nAlphabet: ")
     human_alphabet = readline()
 

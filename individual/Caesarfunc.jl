@@ -14,7 +14,7 @@ function caesarshift(text, alphabet, shift)
     end
 
     # Shift nmubers
-    numbers = [x + shift > length(alphabet) ? x + shift - length(alphabet) : x + shift for x in numbers]
+    numbers = [(x + shift) % length(alphabet) for x in numbers]
 
     shifted = ""
     for i in numbers
