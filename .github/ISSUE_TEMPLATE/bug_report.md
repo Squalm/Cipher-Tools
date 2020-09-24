@@ -27,9 +27,8 @@ A clear and concise description of what actually happens.
 If applicable, add screenshots/videos/gifs to help explain your problem.
 
 **Desktop (please complete the following information):**
- - OS: [e.g. iOS]
- - Browser [e.g. chrome, safari]
- - Version [e.g. 22]
-
+ - OS: e.g. Windows 10 latest
+ - Julia version: e.g. 1.4.1
+ 
 **Additional context**
 Add any other context about the problem here.
