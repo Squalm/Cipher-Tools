@@ -47,4 +47,4 @@ These are `caesarshift()` and `caesarbrute()`.
 `caesarbrute()` takes 2 arguments: `text` and `alphabet`.  
 `text`: A string with your ciphertext.  
 `alphabet`: A string with your alphabet in it.  
-`caesarbrute()` returns an array containing all possible shifts for the text (starting at 1, and ending on the original ciphertext). `caesarbrute()` is dependant on `caesarshift()`.
+`caesarbrute()` returns an array containing all possible shifts for the text (starting at 1, and ending on the original ciphertext). `caesarbrute()` is dependant on `caesarshift()`.  
