@@ -5,7 +5,8 @@ function caesarshift(text, alphabet, shift)
     numbers = []
     shifted = ""
     for letter in text
-        push!(numbers, findfirst(isequal(letter), alphabet))
+        num = findfirst(isequal(letter), alphabet)
+        num == nothing ? println("Blank found.") : push!(numbers, num)
     end
 
     # Shift nmubers
