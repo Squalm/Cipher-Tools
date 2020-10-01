@@ -10,12 +10,7 @@ function caesarshift(text, alphabet, shift)
     end
 
     # Shift nmubers
-    numbers = [((x + shift) % length(alphabet)) + 1 for x in numbers]
-
-    shifted = ""
-    for i in numbers
-        shifted *= alphabet[i]
-    end
+    shifted = [alphabet[i] for i in [((x + shift) % length(alphabet)) + 1 for x in numbers]]
 
     return shifted
 
