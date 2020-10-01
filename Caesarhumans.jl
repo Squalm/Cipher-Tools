@@ -11,7 +11,7 @@ while true
     shifts = caesarbrute(human_input, human_alphabet)
 
     for item in range(1, length = length(shifts))
-        println("Shift of ", (item + 1) % length(shifts), ": ", shifts[item])
+        println("Shift of ", item % length(shifts), ": ", shifts[item])
     end
 
 end
