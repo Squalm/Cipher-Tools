@@ -2,15 +2,7 @@
 function caesarshift(text, alphabet, shift)
 
     # Turn to numbers
-    #=
-    numbers = []
-    for letter in text
-        num = findfirst(isequal(letter), alphabet)
-        num == nothing ? println("Letter not in alphabet!") : push!(numbers, num)
-    end
-    =#
     numbers = [findfirst(isequal(letter), alphabet) for letter in text]
-    println(numbers)
 
     # Shift nmubers
     return [alphabet[i + 1] for i in [((x + shift) % length(alphabet)) for x in numbers]]
