@@ -9,6 +9,7 @@ function caesarshift(text, alphabet, shift)
 
 end
 
+# Caesar brute function
 function caesarbrute(text, alphabet)
 
     return [caesarshift(text, alphabet, i - 1) for i in range(1, length = length(alphabet))]
