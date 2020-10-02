@@ -11,11 +11,6 @@ end
 
 function caesarbrute(text, alphabet)
 
-    shifts = []
-    for i in range(1, length = length(alphabet))
-        push!(shifts, caesarshift(text, alphabet, i - 1))
-    end
-
-    return shifts
+    return [caesarshift(text, alphabet, i - 1) for i in range(1, length = length(alphabet))]
 
 end
