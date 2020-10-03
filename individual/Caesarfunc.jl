@@ -1,5 +1,5 @@
 # Caesar shift function
-function caesarshift(text::String, alphabet::String, shift)
+function caesarshift(text::String, alphabet::String, shift::Int)
 
     # Turn to numbers
     numbers = [findfirst(isequal(letter), alphabet) for letter in text if occursin(letter, alphabet)]
