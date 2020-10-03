@@ -1,5 +1,5 @@
 # Caesar shift function
-function caesarshift(text, alphabet, shift)
+function caesarshift(text::String, alphabet::String, shift)
 
     # Turn to numbers
     numbers = [findfirst(isequal(letter), alphabet) for letter in text if occursin(letter, alphabet)]
@@ -10,7 +10,7 @@ function caesarshift(text, alphabet, shift)
 end
 
 # Caesar brute function
-function caesarbrute(text, alphabet)
+function caesarbrute(text::String, alphabet::String)
 
     return [caesarshift(text, alphabet, i - 1) for i in range(1, length = length(alphabet))]
 

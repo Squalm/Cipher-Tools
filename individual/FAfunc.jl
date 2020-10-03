@@ -1,5 +1,5 @@
 # Index of Coincidence
-function coincidence(text, alphabet)
+function coincidence(text::String, alphabet::String)
 
     alphabet_array = split(alphabet, "")
 
@@ -41,7 +41,7 @@ end
 =#
 
 # Basic Frequency Analysis
-function fa(input, alphabet)
+function fa(input::String, alphabet::String)
 
     text = input
     alphabet_array = split(alphabet, "")
