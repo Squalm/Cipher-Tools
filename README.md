@@ -5,10 +5,9 @@ Codebreaking Something-something
 Cipher tools is collection of all the tools I've made for codebreaking. They were generally made with things like the cipherchallenge in mind. My current intention is to update all of my Python tools into Julia for speed. There will be no fancy GUIs or anything but I'll keep everything user-friendly and well explained in the code. I may even make clean and readable breakdowns of the code if I can be bothered.
 
 ## List of Tools.
-<ul>
-  <li>[Frequency Analysis](https://github.com/Squalm/Cipher-Tools#frequency-analysis)</li>
-  <li>[Caesar Shift](https://github.com/Squalm/Cipher-Tools#caesar-shift)
-</ul>
+
+ - [Frequency Analysis](https://github.com/Squalm/Cipher-Tools#frequency-analysis)
+ - [Caesar Shift](https://github.com/Squalm/Cipher-Tools#caesar-shift)
 
 ## More Details.
 ### Frequency Analysis
