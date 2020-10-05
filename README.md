@@ -40,10 +40,5 @@ These are `caesarshift()` and `caesarbrute()`.
 `caesarshift()` takes 3 arguments: `text`, `alphabet` and `shift`.  
 `text`: A string with your ciphertext.  
 `alphabet`: A string with your alphabet in it.  
-`shift`: The amount you want to shift the text by (+ve).  
-`caesarshift()` returns a string containing the shift of the text.
-##### caesarbrute()
-`caesarbrute()` takes 2 arguments: `text` and `alphabet`.  
-`text`: A string with your ciphertext.  
-`alphabet`: A string with your alphabet in it.  
-`caesarbrute()` returns an array containing all possible shifts for the text (starting at 1, and ending on the original ciphertext). `caesarbrute()` is dependant on `caesarshift()`.  
+`shift`: The amount you want to shift the text by (+ve) [slightly messed up right now]. Broadcast in hear to do multiple shifts at once (Caesarhumans already does this - have a look there for how).  
+`caesarshift()` returns an array containing the shift of the text.
