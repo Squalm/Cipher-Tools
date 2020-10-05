@@ -8,10 +8,10 @@ while true
     println("\nAlphabet: ")
     human_alphabet = readline()
 
-    shifts = caesarbrute(human_input, human_alphabet)
+    shifts = caesarshift.(human_input, human_alphabet, 1:length(human_alphabet))
 
     for item in range(1, length = length(shifts))
-        println("Shift of ", item % length(shifts), ": ", shifts[item])
+        println("Shift of ", (item + 1) % length(shifts), ": ", shifts[item])
     end
 
 end
