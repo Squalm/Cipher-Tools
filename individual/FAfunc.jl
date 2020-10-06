@@ -7,12 +7,12 @@ function coincidence(text::String, alphabet::String)
     sigma = 0
     for letter in alphabet_array
         sigma += (count(letter, text) * (count(letter, text) - 1))
-    end
+    end # for
 
     # Computer out (and calc. Index of Coincidence):
     return sigma / length(text) / (length(text) - 1) / length(alphabet_array)
 
-end
+end # function
 
 # Columnar IoC
 #=
@@ -50,9 +50,9 @@ function fa(input::String, alphabet::String)
     counted = Dict()
     for i in alphabet_array
         counted[i] = count(i, text) / length(text)
-    end
+    end # for
 
     # Computer out:
     return counted
 
-end
+end # function
