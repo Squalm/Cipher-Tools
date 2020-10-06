@@ -19,6 +19,6 @@ while true
 
     # Analyse: Index of coincidence
     println("\nIndex of Coincidence: ")
-    println(coincidence(human_input, split(human_alphabet, "")))
+    println(coincidence(human_input, human_alphabet))
 
 end
