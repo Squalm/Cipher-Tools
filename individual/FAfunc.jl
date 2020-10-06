@@ -16,13 +16,10 @@ end # function
 # Basic Frequency Analysis
 function fa(input::String, alphabet::String)
 
-    text = input
-    alphabet_array = split(alphabet, "")
-
     # Count values in text.
     counted = Dict()
-    for i in alphabet_array
-        counted[i] = count(i, text) / length(text)
+    for i in alphabet
+        counted[i] = count(string(i), input) / length(input)
     end # for
 
     # Computer out:
