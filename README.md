@@ -9,6 +9,7 @@ Cipher tools is collection of all the tools I've made for codebreaking. They wer
  - [Frequency Analysis](https://github.com/Squalm/Cipher-Tools#frequency-analysis)
  - [Caesar Shift](https://github.com/Squalm/Cipher-Tools#caesar-shift)
  - [Entropy](https://github.com/Squalm/Cipher-Tools#entropy)
+ - [Utilities](https://github.com/Squalm/Cipher-Tools#utilities)
 
 ## More Details.
 ### Frequency Analysis
