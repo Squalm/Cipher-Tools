@@ -4,6 +4,9 @@ Codebreaking Something-something
 ## What is Cipher Tools?
 Cipher tools is collection of all the tools I've made for codebreaking. They were generally made with things like the cipherchallenge in mind. My current intention is to update all of my Python tools into Julia. There will be no fancy GUIs or anything but I'll keep everything user-friendly and well explained in the code (mostly, hopefully). I will go into detail later in this document if there's anything weird that needs explaining.
 
+### Repl.it Page!
+Yes this project exists on repl.it! If you can't run julia locally or just find it easier to use the web then use [this link](https://repl.it/@Squalm/Cipher-Tools#README.md).
+
 ## List of Tools.
 
  - [Frequency Analysis](https://github.com/Squalm/Cipher-Tools#frequency-analysis)
