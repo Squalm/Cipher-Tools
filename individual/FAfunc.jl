@@ -8,7 +8,8 @@ function coincidence(text::String, alphabet::String)
     end # for
 
     # Computer out (and calc. Index of Coincidence):
-    return sigma / length(text) / (length(text) - 1) / length(alphabet)
+    refined = removeextras(text, alphabet)
+    return sigma / refined / (refined - 1) / length(alphabet)
 
 end # function
 
@@ -16,10 +17,11 @@ end # function
 # Basic Frequency Analysis
 function fa(input::String, alphabet::String)
 
+    refined = removeextras(text, alphabet)
     # Count values in text.
     counted = Dict()
     for i in alphabet
-        counted[i] = count(string(i), input) / length(input)
+        counted[i] = count(string(i), refined) / length(refined)
     end # for
 
     # Computer out:
