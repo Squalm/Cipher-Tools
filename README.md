@@ -20,6 +20,6 @@ Associated files: [individual\\Caesarfunc.jl](https://github.com/Squalm/Cipher-T
 #### What does it do?
 This Caesar shift program can take a custom alphabet and move the letters along just like in a Caesar cipher. It brute forces the cipher by displaying all possible shifts of the ciphertext. It can be used to encrypt and decrypt Caesar ciphers.  
 ### Entropy
-Associated files: [individual\\Entropyfunc.jl](https://github.com/Squalm/Cipher-Tools/blob/master/individual/Entropyfunc.jl) & [Entropyhumans](https://github.com/Squalm/Cipher-Tools/blob/master/Entropyhumans.jl)  
+Associated files: [individual\\Entropyfunc.jl](https://github.com/Squalm/Cipher-Tools/blob/master/individual/Entropyfunc.jl) & [Entropyhumans.jl](https://github.com/Squalm/Cipher-Tools/blob/master/Entropyhumans.jl)  
 #### What does it do?
 This calculator computes the entropy of a text. Entropy is similar to the index of coincidence. However, IoC is the chance of picking two random letters and them being the same. Entropy is the sum of the chances to pick each letter from the text.  
