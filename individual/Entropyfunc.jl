@@ -4,5 +4,3 @@ function entropy(text::String, alphabet::String)
     return sum([(-i) * log2(i) for i in counts])
 
 end # function
-
-println(entropy("abccd", "abcdef"))
