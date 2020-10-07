@@ -13,10 +13,6 @@ end # function
 
 function removeextras(text::String, keepin::String, returnarray::Bool)
 
-    if returnarray == false
-        removeextras(text, alphabet)
-    else
-        return [letter for letter in text if occursin(letter, keepin)]
-    end # if
+    returnarray == false ? removeextras(text, alphabet) : [letter for letter in text if occursin(letter, keepin)]
 
 end # function
