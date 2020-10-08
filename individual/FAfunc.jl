@@ -1,3 +1,5 @@
+include("Utils.jl")
+
 # Index of Coincidence
 function coincidence(text::String, alphabet::String)
 
@@ -8,7 +10,7 @@ function coincidence(text::String, alphabet::String)
     end # for
 
     # Computer out (and calc. Index of Coincidence):
-    refined = removeextras(text, alphabet)
+    refined = removeExtras(text, alphabet)
     return sigma / length(refined) / (length(refined) - 1) / length(alphabet)
 
 end # function
@@ -17,7 +19,7 @@ end # function
 # Basic Frequency Analysis
 function fa(input::String, alphabet::String)
 
-    refined = removeextras(input, alphabet)
+    refined = removeExtras(input, alphabet)
     # Count values in text.
     counted = Dict()
     for i in alphabet

@@ -1,4 +1,4 @@
-function removeextras(text::String, keepin::String)
+function removeExtras(text::String, keepin::String)
 
     scraped = ""
     for letter in text
@@ -11,7 +11,7 @@ function removeextras(text::String, keepin::String)
 
 end # function
 
-function removeextras(text::String, keepin::String, returnarray::Bool)
+function removeExtras(text::String, keepin::String, returnarray::Bool)
 
     returnarray == false ? removeextras(text, alphabet) : [letter for letter in text if occursin(letter, keepin)]
 
