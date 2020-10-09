@@ -1,6 +1,6 @@
 # Cipher-Tools
-Codebreaking Something-something
-
+ A Codebreaking/Cipherbreaking Toolkit. Currently early in development.  
+ 
 ## What is Cipher Tools?
 Cipher tools is collection of all the tools I've made for codebreaking. They were generally made with things like the cipherchallenge in mind. My current intention is to update all of my Python tools into Julia. There will be no fancy GUIs or anything but I'll keep everything user-friendly and well explained in the code (mostly, hopefully). I will go into detail later in this document if there's anything weird that needs explaining.
 
