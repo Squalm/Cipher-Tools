@@ -10,6 +10,7 @@ function caesarshift(text::String, alphabet::String, shift::Int)
 end # function
 
 function caesarshift(text::String, alphabet::String, shift::Int, returnStr::Bool)
+
     if returnStr == false
         return caesarshift(text, alphabet, shift)
     else
@@ -20,4 +21,5 @@ function caesarshift(text::String, alphabet::String, shift::Int, returnStr::Bool
         end # for
         return out
     end # if
+    
 end # function
