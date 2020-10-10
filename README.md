@@ -31,4 +31,4 @@ This calculator computes the entropy of a text. Entropy is similar to the index 
 Associated files: [individual\\Utils.jl](https://github.com/Squalm/Cipher-Tools/blob/master/individual/Utils.jl).  
 #### What does it do?
 This is a collection of little tools. They're all listed below.  
- - removeextras
+ - removeextras: Removes all characters from `text` that are not in `alphabet`.
