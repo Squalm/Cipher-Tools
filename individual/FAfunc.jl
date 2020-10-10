@@ -3,7 +3,7 @@ include("Utils.jl")
 # Index of Coincidence
 function coincidence(text::String, alphabet::String)
 
-    # Get Sigma
+    # Get Sigma - MAKE ONE LINE WITH SUM()
     sigma = 0
     for letter in alphabet
         sigma += count(string(letter), text) * (count(string(letter), text) - 1)
@@ -17,9 +17,24 @@ end # function
 
 
 # Basic Frequency Analysis
-function fa(input::String, alphabet::String)
+function fa(text::String, alphabet::String)
 
-    refined = removeExtras(input, alphabet)
+    refined = removeExtras(text, alphabet)
+    # Count values in text.
+    counted = Dict()
+    for i in alphabet
+        counted[i] = count(string(i), refined) / length(refined)
+    end # for
+
+    # Computer out:
+    return counted
+
+end # function
+
+# Overload for Arrays
+function fa(text::Array{Char, 1}, alphabet::String)
+
+    refined = removeExtras(text, alphabet)
     # Count values in text.
     counted = Dict()
     for i in alphabet
