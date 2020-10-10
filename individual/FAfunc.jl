@@ -3,7 +3,7 @@ include("Utils.jl")
 # Index of Coincidence
 function coincidence(text::String, alphabet::String)
 
-    # Get Sigma - MAKE ONE LINE WITH SUM()
+    # Get Sigma
     sigma = sum([count(string(letter), text) * (count(string(letter), text) - 1) for letter in alphabet])
 
     # Computer out (and calc. Index of Coincidence):
