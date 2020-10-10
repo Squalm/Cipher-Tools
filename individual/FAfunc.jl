@@ -4,10 +4,7 @@ include("Utils.jl")
 function coincidence(text::String, alphabet::String)
 
     # Get Sigma - MAKE ONE LINE WITH SUM()
-    sigma = 0
-    for letter in alphabet
-        sigma += count(string(letter), text) * (count(string(letter), text) - 1)
-    end # for
+    sigma = sum([count(string(letter), text) * (count(string(letter), text) - 1) for letter in alphabet])
 
     # Computer out (and calc. Index of Coincidence):
     refined = removeExtras(text, alphabet)
