@@ -27,20 +27,3 @@ function fa(text::String, alphabet::String)
     return counted
 
 end # function
-
-# Overload for Arrays
-#=
-function fa(text::Array{Char, 1}, alphabet::String)
-
-    refined = removeExtras(text, alphabet)
-    # Count values in text.
-    counted = Dict()
-    for i in alphabet
-        counted[i] = count(string(i), refined) / length(refined)
-    end # for
-
-    # Computer out:
-    return counted
-
-end # function
-=#
