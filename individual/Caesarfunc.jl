@@ -1,5 +1,3 @@
-### HECKING REMEMBER TO FIX THE ARRAYS NOT BEING ORDERED THINGS!!!!!!!!!
-
 # Caesar shift function
 function caesarshift(text::String, alphabet::String, shift::Int)
 
