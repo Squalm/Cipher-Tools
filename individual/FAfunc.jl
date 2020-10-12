@@ -29,6 +29,7 @@ function fa(text::String, alphabet::String)
 end # function
 
 # Overload for Arrays
+#=
 function fa(text::Array{Char, 1}, alphabet::String)
 
     refined = removeExtras(text, alphabet)
@@ -42,3 +43,4 @@ function fa(text::Array{Char, 1}, alphabet::String)
     return counted
 
 end # function
+=#
