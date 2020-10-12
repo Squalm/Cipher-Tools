@@ -1,13 +1,18 @@
+include("Utils.jl")
+
 # Affine Substitute
-function affine(text::String, alphaDict::Dict{Char, Char})
+function affine(text::String, alphabet::String, nMultiply::Int, nAdd::Int)
 
-    out = ""
-    for letter in text
-        out *= alphaDict[letter]
-    end
-
-    return out
+    out = join([findfirst(isequal(letter), alphabet) for letter in text])
 
 end # function
 
-println(affine("abc", Dict('a' => 'c', 'b' => 'a', 'c' => 'b')))
+function affinebrute(text::String, alphabet::String)
+
+    text = 
+
+    for i in alphabet
+
+    end
+
+end # function
