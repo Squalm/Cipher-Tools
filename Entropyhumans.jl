@@ -10,6 +10,6 @@ while true
     human_alphabet == "" ? human_alphabet = "abcdefghijklmnopqrstuvwxyz" :
     println()
 
-    println("\nEntropy: ", entropy(human_input, human_alphabet))
+    println("\nEntropy: ", entropy(uppercase(human_input), uppercase(human_alphabet)))
 
 end # while

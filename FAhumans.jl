@@ -13,7 +13,7 @@ while true
     println("\nFrequency Analysis: ")
 
     # Anaylse: Frequency analysis
-    counted = fa(human_input, human_alphabet)
+    counted = fa(uppercase(human_input), uppercase(human_alphabet))
     for i in sort!(collect(counted), by = x->x[2], rev = true)
         println(i)
     end
