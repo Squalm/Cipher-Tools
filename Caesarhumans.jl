@@ -10,7 +10,7 @@ while true
     human_alphabet == "" ? human_alphabet = "abcdefghijklmnopqrstuvwxyz" :
     println()
 
-    shifts = caesarshift.(uppercase(human_input), uppercase(human_alphabet), 1:length(human_alphabet), true)
+    shifts = caesarshift.(uppercase(human_input), uppercase(human_alphabet), 1:length(human_alphabet))
 
     for item in range(1, length = length(shifts))
         println("Shift of ", (item + 1) % length(shifts), ": ", shifts[item])
