@@ -3,15 +3,11 @@ include("Utils.jl")
 # Index of Coincidence
 function coincidence(text::String, alphabet::String)
 
-    # Get Sigma
-    sigma = sum([
+    refined = removeExtras(text, alphabet)
+    return sum([
         count(string(letter), text) * (count(string(letter), text) - 1)
         for letter in alphabet
-    ])
-
-    # Computer out (and calc. Index of Coincidence):
-    refined = removeExtras(text, alphabet)
-    return sigma / length(refined) / (length(refined) - 1) / length(alphabet)
+    ]) / length(refined) / (length(refined) - 1) / length(alphabet)
 
 end # function
 
