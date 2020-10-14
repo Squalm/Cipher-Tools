@@ -1,4 +1,5 @@
 include("programs\\FAfunc.jl")
+include("programs\\comparisons.jl")
 
 while true
 
@@ -21,5 +22,8 @@ while true
     # Analyse: Index of coincidence
     println("\nIndex of Coincidence: ")
     println(coincidence(human_input, human_alphabet))
+
+    # Sort IoC
+    iocComparison(coincidence(human_input, human_alphabet))
 
 end
