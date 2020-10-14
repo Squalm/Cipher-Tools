@@ -75,11 +75,6 @@ function faComparison(fa::Dict)
         'Z' => 0.00074
     )
 
-    score = 0
-    for i in collect(fa)
-        score += i[2] * engfreq[i[1]]
-    end
-
-    return score
+    return sum([i[2] * engfreq[i[1]] for i in collect(fa)])
 
 end # function

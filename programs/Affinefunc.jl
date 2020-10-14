@@ -32,7 +32,7 @@ function affinebrute(text::String, alphabet::String)
             if faComparison(fa(aff, alphabet)) > bestScore
                 bestDecrypt = aff
                 bestScore = faComparison(fa(aff, alphabet))
-                println("Got a new best: ", bestScore, ", ", bestDecrypt)
+                println("Got a new best: ", bestScore, ", ", bestDecrypt[1:10])
             end
 
         end
@@ -41,5 +41,3 @@ function affinebrute(text::String, alphabet::String)
     return bestDecrypt
 
 end # function
-
-println(affinebrute("afccx bxscy gahz hz d gfzg bafq pxn gdvf ydsbhqhzj dqy gdvf hg hq d qdhuf bdp hm bf kdzfy xns exchghrz chuhqt hq d vhqy xm ydsbhqhdq nqhufszf xa jp txy gahz hz ynjk", "ABCDEFGHIJKLMNOPQRSTUVWXYZ"))
