@@ -17,10 +17,23 @@ end # function
 
 function affinebrute(text::String, alphabet::String)
 
-    text = removeExtras(text, alphabet)
+    text = removeExtras(uppercase(text), alphabet)
 
-    for i in alphabet
+    bestScore = 0
+    bestDecrypt = ""
+    for i in coprime(length(alphabet))
+        for u in 1:length(alphabet)
 
+            aff = affine(text, alphabet, i, u)
+            if quadgramScore(aff) > bestScore
+                bestDecrypt = aff
+                bestScore = quadgramScore(aff)
+                println("Got a new best: " , bestScore, ", ", bestDecrypt)
+            end
+
+        end
     end # for
+
+    return bestDecrypt
 
 end # function
