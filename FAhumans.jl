@@ -1,4 +1,4 @@
-include("individual\\FAfunc.jl")
+include("programs\\FAfunc.jl")
 
 while true
 

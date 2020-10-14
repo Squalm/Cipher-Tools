@@ -1,4 +1,4 @@
-include("individual\\Entropyfunc.jl")
+include("programs\\Entropyfunc.jl")
 
 while true
 
