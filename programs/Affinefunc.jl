@@ -1,5 +1,6 @@
 include("Utils.jl")
 include("FAfunc.jl")
+include("comparisons.jl")
 
 # Affine Substitute
 function affine(text::String, alphabet::String, nMultiply::Int, nAdd::Int)
@@ -20,6 +21,7 @@ end # function
 
 function affinebrute(text::String, alphabet::String)
 
+    alphabet = uppercase(alphabet)
     text = removeExtras(uppercase(text), alphabet)
 
     bestScore = 0
@@ -27,9 +29,9 @@ function affinebrute(text::String, alphabet::String)
     for i in coprime(length(alphabet))
         for u = 1:length(alphabet)
             aff = affine(text, alphabet, i, u)
-            if quadgramScore(aff) > bestScore
+            if faComparison(fa(aff, alphabet)) > bestScore
                 bestDecrypt = aff
-                bestScore = quadgramScore(aff)
+                bestScore = faComparison(fa(aff, alphabet))
                 println("Got a new best: ", bestScore, ", ", bestDecrypt)
             end
 
@@ -39,3 +41,5 @@ function affinebrute(text::String, alphabet::String)
     return bestDecrypt
 
 end # function
+
+println(affinebrute("afccx bxscy gahz hz d gfzg bafq pxn gdvf ydsbhqhzj dqy gdvf hg hq d qdhuf bdp hm bf kdzfy xns exchghrz chuhqt hq d vhqy xm ydsbhqhdq nqhufszf xa jp txy gahz hz ynjk", "ABCDEFGHIJKLMNOPQRSTUVWXYZ"))
