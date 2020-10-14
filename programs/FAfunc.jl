@@ -46,12 +46,8 @@ function quadgramScore(text::String)
 
     end
 
-    score = 0
-    for i in range(1, length = length(text))
-        if i > 3
-            score += qfdict[text[i - 3: i]]
-        end
-    end
+    # Score it
+    score = sum([qfdict[text[i - 3:i]] for i in range(1, length = length(text)) if i > 3])
 
     return score
 
