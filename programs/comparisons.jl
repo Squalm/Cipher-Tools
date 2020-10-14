@@ -22,6 +22,8 @@ function iocComparison(ioc::Float64)
         println(i)
     end
 
+    return nothing
+
 end # function
 
 # IoC comparison that can just return a comparison dict
