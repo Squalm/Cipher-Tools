@@ -27,3 +27,20 @@ function fa(text::String, alphabet::String)
     return counted
 
 end # function
+
+# Quadgram analysis - ONLY WORKS FOR ENGLISH
+function quadgram(text::String)
+
+    open("programs\\texts\\quadgrams.txt", "r") do qfreq
+
+
+
+    end
+
+    for letter in text
+
+    end
+
+end
+
+quadgram("abchello")
