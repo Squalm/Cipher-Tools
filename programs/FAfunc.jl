@@ -29,18 +29,30 @@ function fa(text::String, alphabet::String)
 end # function
 
 # Quadgram analysis - ONLY WORKS FOR ENGLISH
-function quadgram(text::String)
+function quadgramScore(text::String)
 
+    text = removeExtras(uppercase(text), "ABCDEFGHIJKLMNOPQRSTUVWXYZ")
+
+    # Read the whole file into a dictionary for easy access
+    qfdict = Dict()
     open("programs\\texts\\quadgrams.txt", "r") do qfreq
 
+        while ! eof(qfreq)
 
+            temp = readline(qfreq)
+            qfdict[temp[1:4]] = parse(Int, temp[6:end])
+
+        end
 
     end
 
-    for letter in text
-
+    score = 0
+    for i in range(1, length = length(text))
+        if i > 3
+            score += qfdict[text[i - 3: i]]
+        end
     end
+
+    return score
 
 end
-
-quadgram("abchello")
