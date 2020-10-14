@@ -42,3 +42,15 @@ function iocComparison(ioc::Float64, returnIoCs::Bool)
     return returnIoCs ? countries : iocComparison(ioc)
 
 end # function
+
+# FA English Comparison
+function faComparison(fa::Dict)
+
+    score = 0
+    for i in collect(fa)
+        score += i[2] * fa[i[1]]
+    end
+
+    return score
+
+end # function

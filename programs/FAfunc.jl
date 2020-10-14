@@ -17,7 +17,7 @@ function fa(text::String, alphabet::String)
 
     refined = removeExtras(text, alphabet)
     # Count values in text.
-    counted = Dict()
+    counted = Dict{Char, Float64}()
     for i in alphabet
         counted[i] = count(string(i), refined) / length(refined)
     end # for
