@@ -24,7 +24,7 @@ while true
         end
     end
 
-    println("We think the decryption is this: \n", best, "\n[Press enter to see them all]")
+    println("We think the decryption is this (Assuming the text is in English): \n", best, "\n[Press enter to see them all]")
     readline()
 
     for item in range(1, length = length(shifts))
