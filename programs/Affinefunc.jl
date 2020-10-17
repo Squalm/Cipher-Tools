@@ -19,6 +19,7 @@ function coprime(n::Int)
 
 end # function
 
+# Affine brute scoring mechanism
 function affinebrute(text::String, alphabet::String)
 
     alphabet = uppercase(alphabet)
@@ -32,7 +33,7 @@ function affinebrute(text::String, alphabet::String)
             if faComparison(fa(aff, alphabet)) > bestScore
                 bestDecrypt = aff
                 bestScore = faComparison(fa(aff, alphabet))
-                println("Got a new best: ", bestScore, ", ", bestDecrypt[1:10])
+                # println("Got a new best: ", bestScore, ", ", bestDecrypt[1:10])
             end
 
         end
