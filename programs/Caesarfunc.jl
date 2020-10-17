@@ -5,7 +5,7 @@ function caesarshift(text::String, alphabet::String, shift::Int)
     return join([
         alphabet[i+1]
         for i in [
-            ((x + shift) % length(alphabet))
+            ((x + shift - 1) % length(alphabet))
             for x in [
                 findfirst(isequal(letter), alphabet)
                 for letter in text if occursin(letter, alphabet)
