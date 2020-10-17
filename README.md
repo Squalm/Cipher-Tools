@@ -12,6 +12,7 @@ Yes this project exists on repl.it! If you can't run julia locally or just find 
  - [Frequency Analysis](https://github.com/Squalm/Cipher-Tools#frequency-analysis)
  - [Caesar Shift](https://github.com/Squalm/Cipher-Tools#caesar-shift)
  - [Entropy](https://github.com/Squalm/Cipher-Tools#entropy)
+ - [Affine](https://github.com/Squalm/Cipher-Tools#affine)
  - [Utilities](https://github.com/Squalm/Cipher-Tools#utilities)
 
 ## More Details.
@@ -27,6 +28,10 @@ This Caesar shift program can take a custom alphabet and move the letters along 
 Associated files: [individual\\Entropyfunc.jl](https://github.com/Squalm/Cipher-Tools/blob/master/individual/Entropyfunc.jl) & [Entropyhumans.jl](https://github.com/Squalm/Cipher-Tools/blob/master/Entropyhumans.jl).  
 #### What does it do?
 This calculator computes the entropy of a text. Entropy is similar to the index of coincidence. However, IoC is the chance of picking two random letters and them being the same. Entropy is the sum of the chances to pick each letter from the text.  
+### Affine  
+Associated files: [individual\\Affinefunc.jl](https://github.com/Squalm/Cipher-Tools/blob/master/individual/Affinefunc.jl) & [Affinehumans.jl](ttps://github.com/Squalm/Cipher-Tools/blob/master/Affinehumans.jl)
+#### What does it do?
+Brute force affine cipher super quickly! This will brute force affine ciphers and return the decrypted text assuming that it's English (more languages to be added). An affine cipher is a variant of a Caesar cipher that falls under the category of substitution ciphers.  
 ### Utilities
 Associated files: [individual\\Utils.jl](https://github.com/Squalm/Cipher-Tools/blob/master/individual/Utils.jl).  
 #### What does it do?
