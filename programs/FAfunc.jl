@@ -52,6 +52,7 @@ function quadgramScore(text::String)
 
 end
 
+# Trigram analysis - ONLY WORKS FOR ENGLISH
 function trigramScore(text::String)
 
     text = removeExtras(uppercase(text), "ABCDEFGHIJKLMNOPQRSTUVWXYZ")
@@ -76,6 +77,7 @@ function trigramScore(text::String)
 
 end
 
+# Bigram analysis - ONLY WORKS FOR ENGLISH
 function bigramScore(text::String)
 
     text = removeExtras(uppercase(text), "ABCDEFGHIJKLMNOPQRSTUVWXYZ")
