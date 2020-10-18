@@ -37,7 +37,7 @@ Brute force affine cipher super quickly! This will brute force affine ciphers an
 Associated files: [individual\\Utils.jl](https://github.com/Squalm/Cipher-Tools/blob/master/individual/Utils.jl).  
 #### What does it do?
 This is a collection of little tools. They're all listed below.  
- - removeextras: Removes all characters from `text` that are not in `alphabet`.
+ - removeextras: Removes all characters from `text` that are not in `keepin`.
 
 ## Want to Contribute?
 Sure! Go right ahead! I welcome (almost) all contributions. This place doesn't need to be exclusively Julia either so go wild!
