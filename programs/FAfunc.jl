@@ -75,3 +75,27 @@ function trigramScore(text::String)
     ])
 
 end
+
+function bigramScore(text::String)
+
+    text = removeExtras(uppercase(text), "ABCDEFGHIJKLMNOPQRSTUVWXYZ")
+
+    # Read the whole file into a dictionary for easy access
+    qfdict = Dict()
+    open("programs\\texts\\bigrams.txt", "r") do qfreq
+
+        while !eof(qfreq)
+
+            temp = readline(qfreq)
+            qfdict[temp[1:2]] = parse(Int, temp[4:end])
+
+        end
+
+    end
+
+    # Score it
+    return sum([
+        get(qfdict, text[i-1:i], 0) for i in range(1, length = length(text)) if i > 1
+    ])
+
+end
