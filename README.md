@@ -5,6 +5,7 @@ A Codebreaking/Cipherbreaking Toolkit. Currently early in development.
 Cipher tools is collection of all the tools I've made for codebreaking. They were generally made with things like the cipherchallenge in mind. My current intention is to update all of my Python tools into Julia. There will be no fancy GUIs or anything but I'll keep everything user-friendly and well explained in the code (mostly, hopefully). I will go into detail later in this document if there's anything weird that needs explaining.
 
 ### Repl.it Page!
+**NOTICE! THIS IS CURRENTLY BROKEN, I THINK IT'S ON REPL.IT'S END SO JUST GIVE IT SOME TIME.**  
 Yes this project exists on repl.it! If you can't run julia locally or just find it easier to use the web then use [this link](https://repl.it/@Squalm/Cipher-Tools#README.md). I'll try to keep this page up to date but that requires me remembering to come over here and pull the latest commits to this page... If it looks old then do leave an issue or give me a message or something.
 
 ## List of Tools.
@@ -23,7 +24,7 @@ This frequency analysis program can take a custom alphabet and returns the frequ
 ### Caesar Shift
 Associated files: [individual\\Caesarfunc.jl](https://github.com/Squalm/Cipher-Tools/blob/master/individual/Caesarfunc.jl) & [Caesarhumans.jl](https://github.com/Squalm/Cipher-Tools/blob/master/Caesarhumans.jl).  
 #### What does it do?
-This Caesar shift program can take a custom alphabet and move the letters along just like in a Caesar cipher. It brute forces the cipher by displaying all possible shifts of the ciphertext. It can be used to encrypt and decrypt Caesar ciphers.  
+This Caesar shift program can take a custom alphabet and move the letters along just like in a Caesar cipher. It brute forces the cipher and tries to figure out which piece of text is English (if the text is in English, its almost always accurate) and then displays all possible shifts of the ciphertext in case it got it wrong or the text is in a different language. It can be used to encrypt and decrypt Caesar ciphers.  
 ### Entropy
 Associated files: [individual\\Entropyfunc.jl](https://github.com/Squalm/Cipher-Tools/blob/master/individual/Entropyfunc.jl) & [Entropyhumans.jl](https://github.com/Squalm/Cipher-Tools/blob/master/Entropyhumans.jl).  
 #### What does it do?
