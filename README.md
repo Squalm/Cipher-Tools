@@ -40,6 +40,6 @@ This is a collection of little tools. They're all listed below.
  - removeextras: Removes all characters from `text` that are not in `alphabet`.
 
 ## Want to Contribute?
-Sure! Go right ahead! I welcome (almost) all contribution. This place doesn't need to be exclusively Julia either so go wild!
+Sure! Go right ahead! I welcome (almost) all contributions. This place doesn't need to be exclusively Julia either so go wild!
 ## License
 This project is under a standard [MIT license](https://github.com/Squalm/Cipher-Tools/blob/master/LICENSE).
