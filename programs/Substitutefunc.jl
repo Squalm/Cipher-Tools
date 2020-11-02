@@ -1,14 +1,16 @@
 include("Utils.jl")
 include("FAfunc.jl")
+include("comparisons.jl")
 
 # Susbistution guess - ONLY WORKS WITH ENGLISH
 function substituteGuess(text::String)
 
-    tosubst = Dict()
-    subst = fa(text, "ABCDEFGHIJKLMNOPQRSTUVWXYZ")
-    for i in sort(collect(subst), by = x -> x[2])
-        engfreq = faComparison()
+    engfreq = facomparison()
+    textfreq = fa(uppercase(text), "ABCDEFGHIJKLMNOPQRSTUVWXYZ")
+    sortedeng = sort(collect(engfreq), by = x -> x[2])
+    sortedtext = sort(collect(textfreq), by = x -> x[2])
+    for i in [1:sortedeng]
+        
     end
-
 
 end # function
