@@ -9,15 +9,23 @@ function scytale(text::String, rails::Integer)
     out = []
     eachrail = Dict()
     for i in range(1, length = rails)
-        eachrail[i] = [text[x] for x in range(1, length = length(text)) if x % rails - i == 0 || x % rails - i == -rails]
+        eachrail[i] = join([text[x] for x in range(1, length = length(text)) if x % rails - i == 0 || x % rails - i == -rails])
     end
     println(eachrail)
 
-
-    for letter in text
-
+    for i in range(1, length = rails)
+        print(string(i), ": ")
+        for x in 1:i - 1
+            print("-")
+        end
+        rail = join([x * join(["-" for u in 1:rails]) for x in eachrail[i]])
+        println(rail)
     end
+
+    # for i in range(1, length = length(text) // rails)
+    #    for i in range(1, length = rails)
+
 
 end # function
 
-scytale("abcdef", 2)
+scytale("abcdefghifklmnopqrstuv", 4)
