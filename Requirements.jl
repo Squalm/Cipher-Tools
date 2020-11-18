@@ -7,10 +7,10 @@ readline()
 println("This could take some time...\n\n")
 
 # Plotting tools
-Pkg.add("Plots")
+# Pkg.add("Plots")
 
 # Dependencies for Plots
-Pkg.add("GR")
-Pkg.add("PGFPlotsX")
-Pkg.add("PlotlyJS"); Pkg.add("ORCA")
-Pkg.add("PyPlot")
+# Pkg.add("GR")
+# Pkg.add("PGFPlotsX")
+# Pkg.add("PlotlyJS"); Pkg.add("ORCA")
+# Pkg.add("PyPlot")
