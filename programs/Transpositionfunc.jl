@@ -14,12 +14,14 @@ function scytale(text::String, rails::Integer)
     end
     println(eachrail)
 
+    #==
     for i in range(1, length = rails)
         print(string(i), ": ")
         [print("-") for x in 1:i - 1]
         rail = join([x * join(["-" for u in 1:rails-1]) for x in eachrail[i]])
         println(rail)
     end
+    ==#
 
     return join([eachrail[i] for i in 1:rails])
 
