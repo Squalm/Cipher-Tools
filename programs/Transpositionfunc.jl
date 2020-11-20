@@ -8,8 +8,12 @@ function scytale(text::String, rails::Integer)
     # Since this is a permutation cipher it doesn't need an alphabet
 
     eachrail = Dict()
-    for i in range(1, length = rails)
-        eachrail[i] = join([text[x] for x in range(1, length = length(text)) if x % rails - i == 0 || x % rails - i == -rails])
+    for i = 1:rails
+        eachrail[i] = join([
+            text[x]
+            for x in range(1, length = length(text)) if
+            x % rails - i == 0 || x % rails - i == -rails
+        ])
     end
     # println(eachrail)
 
@@ -22,7 +26,7 @@ function scytale(text::String, rails::Integer)
     end
     ==#
 
-    return join([eachrail[i] for i in 1:rails])
+    return join([eachrail[i] for i = 1:rails])
 
 
 
