@@ -5,7 +5,7 @@ A Codebreaking/Cipherbreaking Toolkit. Currently early in development.
 Cipher tools is collection of all the tools I've made for codebreaking. They were generally made with things like the cipherchallenge in mind. My current intention is to update all of my Python tools into Julia. There will be no fancy GUIs or anything but I'll keep everything user-friendly and well explained in the code (mostly, hopefully). I will go into detail later in this document if there's anything weird that needs explaining.
 
 ### Repl.it Page!
-**NOTICE! THIS IS CURRENTLY BROKEN, I THINK IT'S ON REPL.IT'S END SO JUST GIVE IT SOME TIME.**  
+**UPDATE: STILL SEEMS BROKEN AS FAR AS I CAN TELL. WILL LOOK INTO IT WHEN I HAVE THE CHANCE.**  
 Yes this project exists on repl.it! If you can't run julia locally or just find it easier to use the web then use [this link](https://repl.it/@Squalm/Cipher-Tools#README.md). I'll try to keep this page up to date but that requires me remembering to come over here and pull the latest commits to this page... If it looks old then do leave an issue or give me a message or something.
 
 ## List of Tools.
