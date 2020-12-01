@@ -6,6 +6,7 @@ help = """
 
 Help - ?
 Quit - Q
+Requirements (RUN FIRST) - R
 
 ANALYSIS
 | -> Entropy - EN
@@ -47,6 +48,10 @@ while true
     elseif uppercase(text) == "?"
 
         print(help)
+
+    elseif uppercase(text) == "R"
+
+        include("Requirements.jl")
 
     elseif uppercase(text) == "Q"
 

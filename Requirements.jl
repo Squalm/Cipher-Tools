@@ -14,3 +14,5 @@ println("This could take some time...\n\n")
 # Pkg.add("PGFPlotsX")
 # Pkg.add("PlotlyJS"); Pkg.add("ORCA")
 # Pkg.add("PyPlot")
+
+Pkg.add("Sys")
