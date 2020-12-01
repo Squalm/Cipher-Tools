@@ -6,7 +6,6 @@ help = """
 
 Help - ?
 Quit - Q
-Requirements (RUN FIRST) - R
 
 ANALYSIS
 | -> Entropy - EN

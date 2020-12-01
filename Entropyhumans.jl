@@ -1,4 +1,8 @@
-include("programs\\Entropyfunc.jl")
+if Sys.iswindows()
+    include("programs\\Entropyfunc.jl")
+else
+    include("programs/Entropyfunc.jl")
+end # if
 
 while true
 

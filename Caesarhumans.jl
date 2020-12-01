@@ -1,6 +1,12 @@
-include("programs\\Caesarfunc.jl")
-include("programs\\comparisons.jl")
-include("programs\\FAfunc.jl")
+if Sys.iswindows()
+    include("programs\\Caesarfunc.jl")
+    include("programs\\comparisons.jl")
+    include("programs\\FAfunc.jl")
+else
+    include("programs/Caesarfunc.jl")
+    include("programs/comparisons.jl")
+    include("programs/FAfunc.jl")
+end
 
 while true
 

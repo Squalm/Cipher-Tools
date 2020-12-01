@@ -1,5 +1,10 @@
-include("programs\\FAfunc.jl")
-include("programs\\comparisons.jl")
+if Sys.iswindows()
+    include("programs\\FAfunc.jl")
+    include("programs\\comparisons.jl")
+else
+    include("programs/FAfunc.jl")
+    include("programs/comparisons.jl")
+end # if
 
 while true
 

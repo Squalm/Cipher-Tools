@@ -1,4 +1,8 @@
-include("programs\\Affinefunc.jl")
+if Sys.iswindows()
+    include("programs\\Affinefunc.jl")
+else
+    include("programs/Affinefunc.jl")
+end # if
 
 while true
 
