@@ -16,3 +16,4 @@ println("This could take some time...\n\n")
 # Pkg.add("PyPlot")
 
 # Pkg.add("Sys")
+Pkg.add("JSON")
