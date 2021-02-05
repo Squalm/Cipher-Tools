@@ -31,7 +31,7 @@
     {
       "encrypts": [
         {
-          "encrypts": ["List of encrypts of decrypts using steps"]
+          "encrypts": ["List of encrypts of decrypts using steps"],
           "steps": ["Use a list of the keys from the keys object - don't use the binary"]
         }
       ],
