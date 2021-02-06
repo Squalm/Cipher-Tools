@@ -1,41 +1,39 @@
 {
-  "Key": {
-    "Atbash": 0b1,
-    "ROT13": 0b10,
-    "Caesar": 0b11,
-    "Affine": 0b100,
-    "Rail-fence": 0b101,
-    "Baconian": 0b110,
-    "Polybius Square": 0b111,
-    "Simple Substitution": 0b1000,
-    "Columnar Transposition": 0b1001,
-    "Autokey": 0b1010,
-    "Beaufort": 0b1011,
-    "Porta": 0b1100,
-    "Running Key": 0b1101,
-    "Vignère and Gronsfeld": 0b1110,
-    "Homophonic Substitution": 0b1111,
-    "Four-Square": 0b10000,
-    "Hill": 0b10001,
-    "Playfair": 0b10010,
-    "ADFGVX": 0b10011,
-    "ADFGX": 0b10100,
-    "Bifid": 0b10101,
-    "Straddle Checkerboard": 0b10110,
-    "Trifid": 0b11000,
-    "Base64": 0b11001,
-    "Fractionated Morse": 0b11010,
-    "XOR": 0b11011
-  },
-  "Supervised": [
-    {
-      "encrypts": [
-        {
-          "encrypts": ["List of encrypts of decrypts using steps"],
-          "steps": ["Use a list of the keys from the keys object - don't use the binary"]
-        }
-      ],
-      "decrypts": ["Decrypted text"],
-    }
-  ]
+  "Key": [
+    "Atbash",
+    "ROT13",
+    "Caesar",
+    "Affine",
+    "Rail-fence",
+    "Baconian",
+    "Polybius Square",
+    "Simple Substitution",
+    "Columnar Transposition",
+    "Autokey",
+    "Beaufort",
+    "Porta",
+    "Running Key",
+    "Vignère and Gronsfeld",
+    "Homophonic Substitution",
+    "Four-Square",
+    "Hill",
+    "Playfair",
+    "ADFGVX",
+    "ADFGX",
+    "Bifid",
+    "Straddle Checkerboard",
+    "Trifid",
+    "Base64",
+    "Fractionated Morse",
+    "XOR"
+  ],
+  "Supervised": {
+    "encrypts": [
+      {
+        "encrypts": [],
+        "steps": []
+      }
+    ],
+    "decrypts": []
+  }
 }

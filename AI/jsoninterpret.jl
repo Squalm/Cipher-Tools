@@ -1,4 +1,4 @@
-
+using JSON
 
 """
     importCorpus(path::String)
@@ -9,7 +9,7 @@ function importCorpus(path::String)
 
     full_text = ""
 
-    @time open(path, "r") do file
+    open(path, "r") do file
 
         line = 0
 
@@ -44,4 +44,20 @@ function importCorpus(path::String)
 
 end # function
 
-importCorpus("AI\\Texts\\download\\download\\LOB_COCOA\\lob.txt")
+"""
+    importTraining(schema::String, text::String)
+
+`schema`: A string containing the path to the schema file
+`text`: A string containing the path to the text file
+"""
+function importTraining(schema::String, text::String)
+
+    println("Importing JSON dict from: ", schema)
+    training_data = JSON.parsefile(schema)
+
+    println("Importing the Corpus from: ", text)
+    split_text = importCorpus(text)
+
+end # function
+
+importTraining("AI\\Texts\\schema.json", "AI\\Texts\\download\\download\\LOB_COCOA\\lob.txt")
