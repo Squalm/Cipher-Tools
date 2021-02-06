@@ -8,12 +8,15 @@ Help - ?
 Quit - Q
 
 ANALYSIS
+| -> Cipher Identifier - ##
 | -> Entropy - EN
 | -> Frequency Analysis - FA
 
 BRUTE FORCE
 | -> Caesar Brute - CA
 | -> Affine Brute - AF
+| -> Atbash - ##
+| -> ROT13 - ##
 
 """
 
