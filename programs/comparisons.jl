@@ -75,7 +75,7 @@ function faComparison(fa::Dict)
         'Z' => 0.00074
     )
 
-    return sum([i[2] * engfreq[i[1]] for i in collect(fa)])
+    return sum(-abs([i[2] - engfreq[i[1]]) for i in collect(fa)])
 
 end # function
 
