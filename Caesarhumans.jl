@@ -21,7 +21,7 @@ while true
     shifts = caesarshift.(uppercase(human_input), uppercase(human_alphabet), 1:length(human_alphabet))
 
     best = ""
-    bestscore = 0
+    bestscore = -10000
     for shift in shifts
         score = faComparison(fa(uppercase(shift), uppercase(human_alphabet)))
         if score > bestscore

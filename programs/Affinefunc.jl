@@ -25,7 +25,7 @@ function affinebrute(text::String, alphabet::String)
     alphabet = uppercase(alphabet)
     text = removeExtras(uppercase(text), alphabet)
 
-    bestScore = 0
+    bestScore = -10000
     bestDecrypt = ""
     for i in coprime(length(alphabet))
         for u = 1:length(alphabet)
