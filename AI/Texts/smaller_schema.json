@@ -1,0 +1,39 @@
+{
+  "Key": [
+    "Atbash",
+    "ROT13",
+    "Caesar",
+    "Affine",
+    "Rail-fence",
+    "Baconian",
+    "Polybius Square",
+    "Simple Substitution",
+    "Columnar Transposition",
+    "Autokey",
+    "Beaufort",
+    "Porta",
+    "Running Key",
+    "Vignère and Gronsfeld",
+    "Homophonic Substitution",
+    "Four-Square",
+    "Hill",
+    "Playfair",
+    "ADFGVX",
+    "ADFGX",
+    "Bifid",
+    "Straddle Checkerboard",
+    "Trifid",
+    "Base64",
+    "Fractionated Morse",
+    "XOR"
+  ],
+  "Supervised": {
+    "encrypts": [
+      {
+        "encrypts": [],
+        "steps": []
+      }
+    ],
+    "decrypts": []
+  }
+}

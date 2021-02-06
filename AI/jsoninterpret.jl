@@ -13,7 +13,7 @@ function importCorpus(path::String)
 
         line = 0
 
-        print("\nImporting: <")
+        print("\nReading file: <")
 
         while !eof(file)
 
@@ -24,6 +24,7 @@ function importCorpus(path::String)
 
             if line % 10000 == 0
                 print("=")
+                break
             end # if
 
         end # while
@@ -55,9 +56,11 @@ function importTraining(schema::String, text::String)
     println("Importing JSON dict from: ", schema)
     training_data = JSON.parsefile(schema)
 
-    println("Importing the Corpus from: ", text)
+    println("Importing Corpus from: ", text)
     split_text = importCorpus(text)
+
+    training_data["Supervised"]["decrypts"] = split_text
 
 end # function
 
-importTraining("AI\\Texts\\schema.json", "AI\\Texts\\download\\download\\LOB_COCOA\\lob.txt")
+importTraining("AI\\Texts\\smaller_schema.json", "AI\\Texts\\download\\download\\LOB_COCOA\\lob.txt")
