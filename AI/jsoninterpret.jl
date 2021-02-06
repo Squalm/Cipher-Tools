@@ -48,7 +48,7 @@ end # function
 """
     importTraining(schema::String, text::String)
 
-`schema`: A string containing the path to the schema file
+`schema`: A string containing the path to the schema file\n
 `text`: A string containing the path to the text file
 """
 function importTraining(schema::String, text::String)
@@ -60,6 +60,37 @@ function importTraining(schema::String, text::String)
     split_text = importCorpus(text)
 
     training_data["Supervised"]["decrypts"] = split_text
+
+    #== CREATE THE TRAINING DATA ==#
+
+    # Import ciphers
+    print("Importing ciphers to create supervised encrypts: <")
+    # include("programs\\Atbashfunc.jl")
+    print("=")
+    # include("programs\\Rot13func.jl")
+    print("=")
+    include("Ciphertools:\\programs\\Caesarfunc.jl")
+    print("=")
+    include("programs\\Affinefunc.jl")
+    print("=")
+    # include("programs\\Rainfencefunc.jl")
+    print("=")
+    # include("programs\\Baconianfunc.jl")
+    print("=")
+    # include("programs\\Polybiusfunc.jl")
+    print("=")
+    # include("programs\\Substitutefunc.jl")
+    print("=")
+    # include("programs\\Transpositionfunc.jl")
+    print("=>\n")
+
+    # Single layer
+
+    # Two layers
+
+    # Three layers
+
+    return training_data
 
 end # function
 
