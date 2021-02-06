@@ -9,7 +9,7 @@ Yes this project exists on repl.it! If you can't run julia locally or just find 
 
 ## List of Tools.
 
- - [Cipher Identification]
+ - [Cipher Identification](https://github.com/Squalm/Cipher-Tools#cipher-identification)
  - [Frequency Analysis](https://github.com/Squalm/Cipher-Tools#frequency-analysis)
  - [Caesar Shift](https://github.com/Squalm/Cipher-Tools#caesar-shift)
  - [Entropy](https://github.com/Squalm/Cipher-Tools#entropy)
