@@ -64,12 +64,13 @@ function importTraining(schema::String, text::String)
     #== CREATE THE TRAINING DATA ==#
 
     # Import ciphers
+    #== BUGS WITH PATHS HERE ==#
     print("Importing ciphers to create supervised encrypts: <")
     # include("programs\\Atbashfunc.jl")
     print("=")
     # include("programs\\Rot13func.jl")
     print("=")
-    include("Ciphertools:\\programs\\Caesarfunc.jl")
+    include("programs\\Caesarfunc.jl")
     print("=")
     include("programs\\Affinefunc.jl")
     print("=")
