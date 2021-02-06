@@ -7,9 +7,11 @@ function atbash(text::String, alphabet::String)
 
     if Sys.iswindows()
         include("programs\\Affinefunc.jl")
+        include("programs\\Utils.jl")
     else
         include("programs/Affinefunc.jl")
+        include("programs/Utils.jl")
     end # if
-    return affine(text, alphabet, length(alphabet) - 1, length(alphabet) - 1)
+    return affine(removeExtras(text, alphabet), alphabet, length(alphabet) - 1, length(alphabet) - 1)
 
 end # function
