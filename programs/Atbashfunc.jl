@@ -1,0 +1,11 @@
+"""
+    atbash(text::String, alphabet::String)
+
+This is secretly an affine cipher with `a` and `b` set to the length of the alphabet - 1, so that's how this function treats it.
+"""
+function atbash(text::String, alphabet::String)
+
+    include("programs\\Affinefunc.jl")
+    return affine(text, alphabet, length(alphabet) - 1, length(alphabet) - 1)
+
+end # function
