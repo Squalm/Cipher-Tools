@@ -5,7 +5,11 @@ This is secretly an affine cipher with `a` and `b` set to the length of the alph
 """
 function atbash(text::String, alphabet::String)
 
-    include("programs\\Affinefunc.jl")
+    if Sys.iswindows()
+        include("programs\\Affinefunc.jl")
+    else
+        include("programs/Affinefunc.jl")
+    end # if
     return affine(text, alphabet, length(alphabet) - 1, length(alphabet) - 1)
 
 end # function

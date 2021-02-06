@@ -15,7 +15,7 @@ ANALYSIS
 BRUTE FORCE
 | -> Caesar Brute - CA
 | -> Affine Brute - AF
-| -> Atbash - ##
+| -> Atbash - AB
 | -> ROT13 - ##
 
 """
@@ -46,6 +46,11 @@ while true
 
         println("\n--- CIPHER TOOLS > AFFINE HUMANS ---")
         include("Affinehumans.jl")
+
+    elseif uppercase(text) == "AB"
+
+        println("\n--- CIPHER TOOLS > ATBASH HUMANS ---")
+        include("Atbashhumans.jl")
 
     elseif uppercase(text) == "?"
 
