@@ -38,7 +38,7 @@ function importCorpus(path::String)
     # Split that really long bit of text.
     return [
         full_text[count*1000:(count+1)*1000]
-        for count in 1:(round(Int, length(full_text) / 1000 - length(full_text) % 1000)-1)
+        for count = 1:(round(Int, length(full_text) / 1000 - length(full_text) % 1000)-1)
     ]
 
     return bits
@@ -70,7 +70,7 @@ function importTraining(schema::String, text::String)
     print("=")
     # include("programs\\Rot13func.jl")
     print("=")
-    include("programs\\Caesarfunc.jl")
+    include("Cipher-Tools:\\programs\\Caesarfunc.jl")
     print("=")
     include("programs\\Affinefunc.jl")
     print("=")
@@ -95,4 +95,7 @@ function importTraining(schema::String, text::String)
 
 end # function
 
-importTraining("AI\\Texts\\smaller_schema.json", "AI\\Texts\\download\\download\\LOB_COCOA\\lob.txt")
+importTraining(
+    "AI\\Texts\\smaller_schema.json",
+    "AI\\Texts\\download\\download\\LOB_COCOA\\lob.txt",
+)

@@ -12,6 +12,11 @@ function atbash(text::String, alphabet::String)
         include("programs/Affinefunc.jl")
         include("programs/Utils.jl")
     end # if
-    return affine(removeExtras(text, alphabet), alphabet, length(alphabet) - 1, length(alphabet) - 1)
+    return affine(
+        removeExtras(text, alphabet),
+        alphabet,
+        length(alphabet) - 1,
+        length(alphabet) - 1,
+    )
 
 end # function
