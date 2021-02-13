@@ -10,7 +10,7 @@ Help - ?
 Quit - Q
 
 ANALYSIS
-| -> Cipher Identifier - ##
+| -> Cipher Identifier - [IN PROGRESS]
 | -> Entropy - EN
 | -> Frequency Analysis - FA
 
@@ -18,7 +18,12 @@ BRUTE FORCE
 | -> Caesar Brute - CA
 | -> Affine Brute - AF
 | -> Atbash - AB
-| -> ROT13 - ##
+| -> ROT13 - [COMING NEXT]
+| -> Rail-fence - [COMING SOON]
+| -> Baconian - [COMING SOON]
+| -> Polybius Square - [COMING SOON]
+| -> Simple Substitution - [COMING SOON]
+| -> Transposition - [COMING SOON]
 
 """
 
