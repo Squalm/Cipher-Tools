@@ -1,4 +1,10 @@
-include("Utils.jl")
+module FAM
+
+export coincidence, fa, quadgramscore, trigramscore, bigramscore
+
+# include("Utils.jl")
+
+using Main.UtilsM: removeExtras
 
 # Index of Coincidence
 function coincidence(text::String, alphabet::String)
@@ -101,3 +107,5 @@ function bigramScore(text::String)
     ])
 
 end
+
+end # module

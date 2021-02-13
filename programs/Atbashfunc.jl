@@ -1,3 +1,10 @@
+module AtBashM
+
+export atbash
+
+using Main.AffineM: affine
+using Main.UtilsM: removeExtras
+
 """
     atbash(text::String, alphabet::String)
 
@@ -5,13 +12,6 @@ This is secretly an affine cipher with `a` and `b` set to the length of the alph
 """
 function atbash(text::String, alphabet::String)
 
-    if Sys.iswindows()
-        include("programs\\Affinefunc.jl")
-        include("programs\\Utils.jl")
-    else
-        include("programs/Affinefunc.jl")
-        include("programs/Utils.jl")
-    end # if
     return affine(
         removeExtras(text, alphabet),
         alphabet,
@@ -20,3 +20,5 @@ function atbash(text::String, alphabet::String)
     )
 
 end # function
+
+end # module

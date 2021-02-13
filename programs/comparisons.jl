@@ -1,3 +1,7 @@
+module ComparisonM
+
+export iocComparison, faComparison
+
 # IoC Comparison (for humans)
 function iocComparison(ioc::Float64)
 
@@ -114,3 +118,5 @@ function faComparison()
     return engfreq
 
 end # function
+
+end # module

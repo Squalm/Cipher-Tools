@@ -1,5 +1,8 @@
-include("Utils.jl")
-include("FAfunc.jl")
+module TranspositionM
+
+export scytale
+
+using Main.UtilsM: removeExtras
 
 # Scytale Cipher
 function scytale(text::String, rails::Integer)
@@ -17,19 +20,12 @@ function scytale(text::String, rails::Integer)
     end
     # println(eachrail)
 
-    #==
-    for i in range(1, length = rails)
-        print(string(i), ": ")
-        [print("-") for x in 1:i - 1]
-        rail = join([x * join(["-" for u in 1:rails-1]) for x in eachrail[i]])
-        println(rail)
-    end
-    ==#
-
     return join([eachrail[i] for i = 1:rails])
 
 
 
 end # function
 
-println(scytale("WOEEVEAEARRTEEODDNIFCSLEC", 3))
+# println(scytale("WOEEVEAEARRTEEODDNIFCSLEC", 3))
+
+end # module

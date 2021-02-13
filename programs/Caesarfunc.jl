@@ -1,3 +1,7 @@
+module CaesarM
+
+export caesarshift
+
 # Caesar shift function
 function caesarshift(text::String, alphabet::String, shift::Int)
 
@@ -14,3 +18,5 @@ function caesarshift(text::String, alphabet::String, shift::Int)
     ])
 
 end # function
+
+end # module

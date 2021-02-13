@@ -1,4 +1,10 @@
-include("Utils.jl")
+module EntropyM
+
+export entropy
+
+# include("Utils.jl")
+
+using Main.UtilsM: removeExtras
 
 function entropy(text::String, alphabet::String)
 
@@ -12,3 +18,5 @@ function entropy(text::String, alphabet::String)
     ])
 
 end # function
+
+end # module

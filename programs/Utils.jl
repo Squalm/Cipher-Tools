@@ -1,3 +1,7 @@
+module UtilsM
+
+export removeExtras
+
 function removeExtras(text::String, keepin::String)
 
     scraped = ""
@@ -10,3 +14,5 @@ function removeExtras(text::String, keepin::String)
     return scraped
 
 end # function
+
+end # module

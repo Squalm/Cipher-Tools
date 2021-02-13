@@ -1,6 +1,13 @@
-include("Utils.jl")
-include("FAfunc.jl")
-include("comparisons.jl")
+module AffineM
+
+export affine, coprime, affinebrute
+
+# include("Utils.jl")
+# include("FAfunc.jl")
+# include("comparisons.jl")
+
+using Main.UtilsM: removeExtras
+using Main.ComparisonM: faComparison
 
 # Affine Substitute
 function affine(text::String, alphabet::String, nMultiply::Int, nAdd::Int)
@@ -42,3 +49,5 @@ function affinebrute(text::String, alphabet::String)
     return bestDecrypt
 
 end # function
+
+end # module
