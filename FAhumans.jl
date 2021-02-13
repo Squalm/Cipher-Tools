@@ -1,10 +1,5 @@
-if Sys.iswindows()
-    include("programs\\FAfunc.jl")
-    include("programs\\comparisons.jl")
-else
-    include("programs/FAfunc.jl")
-    include("programs/comparisons.jl")
-end # if
+using Main.FAM: fa, coincidence
+using Main.ComparisonM: iocComparison
 
 while true
 

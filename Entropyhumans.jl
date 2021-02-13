@@ -1,8 +1,4 @@
-if Sys.iswindows()
-    include("programs\\Entropyfunc.jl")
-else
-    include("programs/Entropyfunc.jl")
-end # if
+using Main.EntropyM: entropy
 
 while true
 

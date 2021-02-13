@@ -1,12 +1,6 @@
-if Sys.iswindows()
-    include("programs\\Caesarfunc.jl")
-    include("programs\\comparisons.jl")
-    include("programs\\FAfunc.jl")
-else
-    include("programs/Caesarfunc.jl")
-    include("programs/comparisons.jl")
-    include("programs/FAfunc.jl")
-end
+using Main.CaesarM: caesarshift
+using Main.ComparisonM: faComparison
+using Main.FAM: fa
 
 while true
 

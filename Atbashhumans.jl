@@ -1,8 +1,4 @@
-if Sys.iswindows()
-    include("programs\\Atbashfunc.jl")
-else
-    include("programs/Atbashfunc.jl")
-end # if
+using Main.AtBashM: atbash
 
 while true
 
