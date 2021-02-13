@@ -1,5 +1,7 @@
 # Allow selection of different modules - TO DO INTEGRATE EACH MODEL INTO HERE
 
+include("ImportModules.jl")
+
 help = """
 
 --- CIPHER TOOLS > ALL FOR HUMANS ---
@@ -66,7 +68,7 @@ while true
 
     else
 
-        println("Not a recognised code.")
+        println("Not a recognised code. Type '?' for help.")
 
     end
 
