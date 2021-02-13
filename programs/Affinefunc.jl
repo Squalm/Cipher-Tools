@@ -2,12 +2,9 @@ module AffineM
 
 export affine, coprime, affinebrute
 
-# include("Utils.jl")
-# include("FAfunc.jl")
-# include("comparisons.jl")
-
 using Main.UtilsM: removeExtras
 using Main.ComparisonM: faComparison
+using Main.FAM: fa
 
 # Affine Substitute
 function affine(text::String, alphabet::String, nMultiply::Int, nAdd::Int)
@@ -40,10 +37,8 @@ function affinebrute(text::String, alphabet::String)
             if faComparison(fa(aff, alphabet)) > bestScore
                 bestDecrypt = aff
                 bestScore = faComparison(fa(aff, alphabet))
-                # println("Got a new best: ", bestScore, ", ", bestDecrypt[1:10])
-            end
-
-        end
+            end # if
+        end # for
     end # for
 
     return bestDecrypt

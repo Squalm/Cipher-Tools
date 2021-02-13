@@ -1,8 +1,4 @@
-if Sys.iswindows()
-    include("programs\\Affinefunc.jl")
-else
-    include("programs/Affinefunc.jl")
-end # if
+using Main.AffineM: affinebrute
 
 while true
 
