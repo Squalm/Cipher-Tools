@@ -10,6 +10,7 @@ Yes this project exists on repl.it! If you can't run julia locally or just find 
 ## List of Tools.
 
  - [Cipher Identification](https://github.com/Squalm/Cipher-Tools#cipher-identification)
+ - [All for Humans](https://github.com/Squalm/Cipher-Tools#all-for-humans) - *Easy interface for people!*
  - [Frequency Analysis](https://github.com/Squalm/Cipher-Tools#frequency-analysis)
  - [Caesar Shift](https://github.com/Squalm/Cipher-Tools#caesar-shift)
  - [Entropy](https://github.com/Squalm/Cipher-Tools#entropy)
@@ -20,25 +21,17 @@ Yes this project exists on repl.it! If you can't run julia locally or just find 
 ### Cipher Identification
 This weird cipher identifier is an AI powered layered cipher identifier (not breaker).  
 The AI is currently (a) not working and (b) not using a full set (planned in [schema.json](https://github.com/Squalm/Cipher-Tools/blob/master/AI/Texts/schema.json)) of ciphers to identify (set [currently in use](https://github.com/Squalm/Cipher-Tools/blob/master/AI/Texts/smaller_schema.json)).
+### All for Humans
+This is a user interface for all the ciphers and analysis tools currently here. This makes it super easy to run any of the stuff in this git, and unless you need to get technical with modifying my code, I suggest you use this instead of running files directly. No need to worry about running the right modules beforehand or even finding the right files! Just use this file!
 ### Frequency Analysis
-Associated files: [FAhumans.jl](https://github.com/Squalm/Cipher-Tools/blob/master/FAhumans.jl) & [programs\\FAfunc.jl](https://github.com/Squalm/Cipher-Tools/blob/master/programs/FAfunc.jl).  
-#### What does it do?
 This frequency analysis program can take a custom alphabet and returns the frequency of each letter as a value. It also shows the Index of Coincidence of the text.  
 ### Caesar Shift
-Associated files: [programs\\Caesarfunc.jl](https://github.com/Squalm/Cipher-Tools/blob/master/programs/Caesarfunc.jl) & [Caesarhumans.jl](https://github.com/Squalm/Cipher-Tools/blob/master/Caesarhumans.jl).  
-#### What does it do?
 This Caesar shift program can take a custom alphabet and move the letters along just like in a Caesar cipher. It brute forces the cipher and tries to figure out which piece of text is English (if the text is in English, its almost always accurate) and then displays all possible shifts of the ciphertext in case it got it wrong or the text is in a different language. It can be used to encrypt and decrypt Caesar ciphers.  
 ### Entropy
-Associated files: [programs\\Entropyfunc.jl](https://github.com/Squalm/Cipher-Tools/blob/master/programs/Entropyfunc.jl) & [Entropyhumans.jl](https://github.com/Squalm/Cipher-Tools/blob/master/Entropyhumans.jl).  
-#### What does it do?
 This calculator computes the entropy of a text. Entropy is similar to the index of coincidence. However, IoC is the chance of picking two random letters and them being the same. Entropy is the sum of the chances to pick each letter from the text.  
 ### Affine  
-Associated files: [programs\\Affinefunc.jl](https://github.com/Squalm/Cipher-Tools/blob/master/programs/Affinefunc.jl) & [Affinehumans.jl](ttps://github.com/Squalm/Cipher-Tools/blob/master/Affinehumans.jl)
-#### What does it do?
 Brute force affine cipher super quickly! This will brute force affine ciphers and return the decrypted text assuming that it's English (more languages to be added). An affine cipher is a variant of a Caesar cipher that falls under the category of substitution ciphers.  
 ### Utilities
-Associated files: [programs\\Utils.jl](https://github.com/Squalm/Cipher-Tools/blob/master/programs/Utils.jl).  
-#### What does it do?
 This is a collection of little tools. They're all listed below.  
  - removeextras: Removes all characters from `text` that are not in `keepin`.
 
