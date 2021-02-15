@@ -30,7 +30,7 @@ This frequency analysis program can take a custom alphabet and returns the frequ
 ### Caesar Shift
 This Caesar shift program can take a custom alphabet and move the letters along just like in a Caesar cipher. It brute forces the cipher and tries to figure out which piece of text is English (if the text is in English, its almost always accurate) and then displays all possible shifts of the ciphertext in case it got it wrong or the text is in a different language. It can be used to encrypt and decrypt Caesar ciphers.  
 #### ROT13
-Just a Caesar shift with a shift of 13.
+Just a Caesar shift with a shift of 13 (half of the length of the alphabet).
 ### Entropy
 This calculator computes the entropy of a text. Entropy is similar to the index of coincidence. However, IoC is the chance of picking two random letters and them being the same. Entropy is the sum of the chances to pick each letter from the text.  
 ### Affine  

@@ -18,7 +18,7 @@ BRUTE FORCE
 | -> Caesar Brute - CA
 | -> Affine Brute - AF
 | -> Atbash - AB
-| -> ROT13 - [COMING NEXT]
+| -> ROT13 - RO
 | -> Rail-fence - [COMING SOON]
 | -> Baconian - [COMING SOON]
 | -> Polybius Square - [COMING SOON]
@@ -32,42 +32,47 @@ print(help)
 while true
 
     print(">> ")
-    text = readline()
+    text = uppercase(readline())
 
-    if uppercase(text) == "EN"
+    if text == "EN"
 
         println("\n--- CIPHER TOOLS > ENTROPY HUMANS ---")
         include("Entropyhumans.jl")
 
-    elseif uppercase(text) == "FA"
+    elseif text == "FA"
 
         println("\n--- CIPHER TOOLS > FREQUENCY ANALYSIS HUMANS ---")
         include("FAhumans.jl")
 
-    elseif uppercase(text) == "CA"
+    elseif text == "CA"
 
         println("\n--- CIPHER TOOLS > CAESAR HUMANS ---")
         include("Caesarhumans.jl")
 
-    elseif uppercase(text) == "AF"
+    elseif text == "AF"
 
         println("\n--- CIPHER TOOLS > AFFINE HUMANS ---")
         include("Affinehumans.jl")
 
-    elseif uppercase(text) == "AB"
+    elseif text == "AB"
 
         println("\n--- CIPHER TOOLS > ATBASH HUMANS ---")
         include("Atbashhumans.jl")
 
-    elseif uppercase(text) == "?"
+    elseif text == "RO"
+
+        println("\n--- CIPHER TOOLS > ROT13 HUMMANS ---")
+        include("Rot13humans.jl")
+
+    elseif text == "?"
 
         print(help)
 
-    elseif uppercase(text) == "R"
+    elseif text == "R"
 
         include("Requirements.jl")
 
-    elseif uppercase(text) == "Q"
+    elseif text == "Q"
 
         break
 
