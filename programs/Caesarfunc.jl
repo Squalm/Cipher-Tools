@@ -1,6 +1,6 @@
 module CaesarM
 
-export caesarshift
+export caesarshift, rot13
 
 # Caesar shift function
 function caesarshift(text::String, alphabet::String, shift::Int)
@@ -17,6 +17,16 @@ function caesarshift(text::String, alphabet::String, shift::Int)
         ]
     ])
 
+end # function
+
+# ROT13 because why not
+"""
+    rot13(text::String, alphabet::String)
+
+Returns decrypted/encrypted (they're the same process) text as a string.
+"""
+function rot13(text::String, alphabet::String)
+    return caesarshift(text, alphabet, 13)
 end # function
 
 end # module
