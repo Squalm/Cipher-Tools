@@ -13,8 +13,10 @@ Yes this project exists on repl.it! If you can't run julia locally or just find 
  - [All for Humans](https://github.com/Squalm/Cipher-Tools#all-for-humans) - *Easy interface for people!*
  - [Frequency Analysis](https://github.com/Squalm/Cipher-Tools#frequency-analysis)
  - [Caesar Shift](https://github.com/Squalm/Cipher-Tools#caesar-shift)
+ - [ROT13](https://github.com/Squalm/Cipher-Tools#rot13)
  - [Entropy](https://github.com/Squalm/Cipher-Tools#entropy)
  - [Affine](https://github.com/Squalm/Cipher-Tools#affine)
+ - [AtBash](https://github.com/Squalm/Cipher-Tools#atbash)
  - [Utilities](https://github.com/Squalm/Cipher-Tools#utilities)
 
 ## More Details.
@@ -27,10 +29,14 @@ This is a user interface for all the ciphers and analysis tools currently here. 
 This frequency analysis program can take a custom alphabet and returns the frequency of each letter as a value. It also shows the Index of Coincidence of the text.  
 ### Caesar Shift
 This Caesar shift program can take a custom alphabet and move the letters along just like in a Caesar cipher. It brute forces the cipher and tries to figure out which piece of text is English (if the text is in English, its almost always accurate) and then displays all possible shifts of the ciphertext in case it got it wrong or the text is in a different language. It can be used to encrypt and decrypt Caesar ciphers.  
+#### ROT13
+Just a Caesar shift with a shift of 13.
 ### Entropy
 This calculator computes the entropy of a text. Entropy is similar to the index of coincidence. However, IoC is the chance of picking two random letters and them being the same. Entropy is the sum of the chances to pick each letter from the text.  
 ### Affine  
 Brute force affine cipher super quickly! This will brute force affine ciphers and return the decrypted text assuming that it's English (more languages to be added). An affine cipher is a variant of a Caesar cipher that falls under the category of substitution ciphers.  
+#### AtBash
+An affine cipher where `a` and `b` equal the length of the alphabet - 1.
 ### Utilities
 This is a collection of little tools. They're all listed below.  
  - removeextras: Removes all characters from `text` that are not in `keepin`.
