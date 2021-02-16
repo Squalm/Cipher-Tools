@@ -64,25 +64,33 @@ function importTraining(schema::String, text::String)
     #== CREATE THE TRAINING DATA ==#
 
     # Import ciphers
-    #== BUGS WITH PATHS HERE ==#
-    print("Importing ciphers to create supervised encrypts: <")
-    # include("programs\\Atbashfunc.jl")
+    print("Checking for ciphers to create supervised encrypts: <")
+    # Atbash
+    using Main.AtbashM: atbash
     print("=")
-    # include("programs\\Rot13func.jl")
+    # ROT13
+    using Main.CaesarM: rot13
     print("=")
-    include("Cipher-Tools:\\programs\\Caesarfunc.jl")
+    # Caesar
+    using Main.CaesarM: caesarshift
     print("=")
-    include("programs\\Affinefunc.jl")
+    # Affine
+    using Main.AffineM: affine
     print("=")
-    # include("programs\\Rainfencefunc.jl")
+    # Rail fence
+    #
     print("=")
-    # include("programs\\Baconianfunc.jl")
+    # Bacon
+    #
     print("=")
-    # include("programs\\Polybiusfunc.jl")
+    # Polybius square
+    #
     print("=")
-    # include("programs\\Substitutefunc.jl")
+    # Simple Substitution
+    #
     print("=")
-    # include("programs\\Transpositionfunc.jl")
+    # Columnar Transposition
+    #
     print("=>\n")
 
     # Single layer
