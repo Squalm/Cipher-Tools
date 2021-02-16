@@ -69,12 +69,7 @@ function importTraining(schema::String, text::String)
 
     ciphers = 4
     alphabet = "ABCDEFGHIJKLMNOPQRSTUVWXYZ"
-    encrypt_format =
-    {
-        "encrypts" => [],
-        "steps" => [],
-        "text_id" => []
-    }
+    encrypt_format = ("encrypts" => [], "steps" => [], "text_id" => [])
 
     # Single layer
 
