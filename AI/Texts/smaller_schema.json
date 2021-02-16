@@ -15,6 +15,7 @@
       {
         "encrypts": [],
         "steps": []
+        "text_id": 0
       }
     ],
     "decrypts": []
