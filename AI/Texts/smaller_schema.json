@@ -1,6 +1,6 @@
 {
   "Key": [
-    "Atbash",
+    "AtBash",
     "ROT13",
     "Caesar",
     "Affine",
@@ -14,8 +14,8 @@
     "encrypts": [
       {
         "encrypts": [],
-        "steps": []
-        "text_id": 0
+        "steps": [],
+        "text_id": []
       }
     ],
     "decrypts": []

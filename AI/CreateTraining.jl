@@ -1,4 +1,5 @@
 using JSON
+using Random
 
 """
     importCorpus(path::String)
@@ -64,27 +65,39 @@ function importTraining(schema::String, text::String)
     #== CREATE THE TRAINING DATA ==#
 
     # Import ciphers
-    print("Checking for ciphers to create supervised encrypts.")
-    # Atbash
-    using Main.AtbashM: atbash
-    # ROT13
-    using Main.CaesarM: rot13
-    # Caesar
-    using Main.CaesarM: caesarshift
-    # Affine
-    using Main.AffineM: affine
-    # Rail fence
+    println("MAKE SURE THAT ALL CIPHERS ARE LOADED MODULES. [if using Allforhumans, this won't be a problem]")
 
-    # Bacon
-
-    # Polybius square
-
-    # Simple Substitution
-
-    # Columnar Transposition
-    
+    ciphers = 4
+    alphabet = "ABCDEFGHIJKLMNOPQRSTUVWXYZ"
+    encrypt_format =
+    {
+        "encrypts" => [],
+        "steps" => [],
+        "text_id" => []
+    }
 
     # Single layer
+
+    for cipher in 1:ciphers
+
+        _encrypts = []
+        push!(encrypt_format, training_data["Supervised"]["encrypts"])
+        append!(cipher, training_data["Supervised"]["encrypts"][end]["steps"]) # 1 = AtBash, 2 = ROT13 etc.
+
+        for text in 1:length(training_data["Supervised"]["decrypts"])
+
+            if cipher == 1 # AtBash
+                if rand(1:6) == 6
+                    append!(atbash(training_data["Supervised"]["decrypts"][text], alphabet), _encrypts)
+                    append!(text, training_data["Supervised"]["encrypts"][end]["text_id"])
+                end # if
+            end # if
+
+        end # for
+
+        append!(_encrypts, training_data["Supervised"]["encrypts"][end]["encrypts"])
+
+    end # for
 
     # Two layers
 
