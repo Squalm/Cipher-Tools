@@ -64,34 +64,25 @@ function importTraining(schema::String, text::String)
     #== CREATE THE TRAINING DATA ==#
 
     # Import ciphers
-    print("Checking for ciphers to create supervised encrypts: <")
+    print("Checking for ciphers to create supervised encrypts.")
     # Atbash
     using Main.AtbashM: atbash
-    print("=")
     # ROT13
     using Main.CaesarM: rot13
-    print("=")
     # Caesar
     using Main.CaesarM: caesarshift
-    print("=")
     # Affine
     using Main.AffineM: affine
-    print("=")
     # Rail fence
-    #
-    print("=")
+
     # Bacon
-    #
-    print("=")
+
     # Polybius square
-    #
-    print("=")
+
     # Simple Substitution
-    #
-    print("=")
+
     # Columnar Transposition
-    #
-    print("=>\n")
+    
 
     # Single layer
 
