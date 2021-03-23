@@ -8,6 +8,7 @@ help = """
 
 Help - ?
 Quit - Q
+Install Requirements - R
 
 ANALYSIS
 | -> Cipher Identifier - [IN PROGRESS]

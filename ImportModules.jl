@@ -10,7 +10,7 @@ if Sys.iswindows()
     include("programs\\Caesarfunc.jl")
     include("programs\\Substitutefunc.jl")
     include("programs\\Transpositionfunc.jl")
-    include("programs\\Baconfunc.jl")
+    # include("programs\\Baconfunc.jl")
 else
     include("programs/Utils.jl")
     include("programs/comparisons.jl")
@@ -21,5 +21,5 @@ else
     include("programs/Caesarfunc.jl")
     include("programs/Substitutefunc.jl")
     include("programs/Transpositionfunc.jl")
-    include("program/Baconfunc.jl")
+    # include("program/Baconfunc.jl")
 end # if
