@@ -11,9 +11,9 @@ function coincidence(text::String, alphabet::String)
 
     refined = removeExtras(text, alphabet)
     return sum([
-        count(string(letter), text) * (count(string(letter), text) - 1)
+        count(string(letter), refined) * (count(string(letter), refined) - 1)
         for letter in alphabet
-    ]) / length(refined) / (length(refined) - 1) / length(alphabet)
+    ]) / length(refined) / (length(refined) - 1) * length(alphabet)
 
 end # function
 
