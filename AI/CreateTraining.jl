@@ -38,11 +38,9 @@ function importCorpus(path::String)
 
     # Split that really long bit of text.
     return [
-        full_text[count*1000:(count+1)*1000]
-        for count = 1:(round(Int, length(full_text) / 1000 - length(full_text) % 1000)-1)
+        full_text[count*500:(count+1)*500]
+        for count = 1:(round(Int, length(full_text) / 500 - length(full_text) % 500)-1)
     ]
-
-    return bits
 
 end # function
 

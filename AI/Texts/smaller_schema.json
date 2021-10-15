@@ -3,21 +3,15 @@
     "AtBash",
     "ROT13",
     "Caesar",
-    "Affine",
-    "Rail-fence",
-    "Baconian",
-    "Polybius Square",
-    "Simple Substitution",
-    "Columnar Transposition"
+    "Affine"
   ],
   "Supervised": {
-    "encrypts": [
+    "texts": [
       {
-        "encrypts": [],
-        "steps": [],
-        "text_id": []
+        "encrypt": "",
+        "decrypt": "",
+        "steps": ""
       }
-    ],
-    "decrypts": []
+    ]
   }
 }
