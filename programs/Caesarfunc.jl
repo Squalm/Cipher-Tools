@@ -1,6 +1,10 @@
 module CaesarM
 
-export caesarshift, rot13
+export caesarshift, rot13, caesarbrute
+
+using Main.UtilsM: removeExtras
+using Main.ComparisonM: faComparison
+using Main.FAM: fa
 
 # Caesar shift function
 function caesarshift(text::String, alphabet::String, shift::Int)
@@ -16,6 +20,28 @@ function caesarshift(text::String, alphabet::String, shift::Int)
             ]
         ]
     ])
+
+end # function
+
+"""
+Brute force solves a caesar cipher, required english text.
+"""
+function caesarbrute(text::String)
+
+    alphabet = "ABCDEFGHIJKLMNOPQRSTUVWXYZ"
+    text = removeExtras(uppercase(text), alphabet)
+
+    best = ""
+    bestscore = -Inf
+    for shift in caesarshift.(text, alphabet, 1:length(alphabet))
+        score = faComparison(fa(uppercase(shift), alphabet))
+        if score > bestscore
+            best = shift
+            bestscore = score
+        end
+    end
+
+    return best
 
 end # function
 
