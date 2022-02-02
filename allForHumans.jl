@@ -20,6 +20,7 @@ BRUTE FORCE
 | -> Affine Brute - AF
 | -> Atbash - AB
 | -> ROT13 - RO
+| -> Vignere - VI
 | -> Rail-fence - [COMING SOON]
 | -> Baconian - [COMING SOON]
 | -> Polybius Square - [COMING SOON]
@@ -64,6 +65,11 @@ while true
 
         println("\n--- CIPHER TOOLS > ROT13 HUMMANS ---")
         include("Rot13humans.jl")
+
+    elseif text == "VI"
+
+        println("\n--- CIPHER TOOLS > VIGNERE HUMANS ---")
+        include("Vignerehumans.jl")
 
     elseif text == "?"
 
