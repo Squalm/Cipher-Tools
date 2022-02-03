@@ -34,10 +34,14 @@ end
     debacon(text::String, len::Int)
     debacon(text::String, alphabet::String)
 
-Inverse of bacon().
+Opposite of bacon().
 
 Takes a string of 0s and 1s and splits it into "characters" of length `len`
 then parses them into a string using `alphabet`.
+
+If no alphabet specified, assumes the following:
+
+`ABCDEFGHIJKLMNOPQRSTUVWXYZ1234567890abcdefghijklmnopqrstuvwxyz!£%^&*()-=_+[]{};'#:@~,./<>?`
 """
 function debacon(text::String, len::Int, alphabet::String)
 
