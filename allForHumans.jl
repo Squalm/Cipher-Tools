@@ -21,8 +21,8 @@ BRUTE FORCE
 | -> Atbash - AB
 | -> ROT13 - RO
 | -> Vignere - VI
+| -> Baconian - BA
 | -> Rail-fence - [COMING SOON]
-| -> Baconian - [COMING SOON]
 | -> Polybius Square - [COMING SOON]
 | -> Simple Substitution - [COMING SOON]
 | -> Transposition - [COMING SOON]
@@ -70,6 +70,11 @@ while true
 
         println("\n--- CIPHER TOOLS > VIGNERE HUMANS ---")
         include("Vignerehumans.jl")
+
+    elseif text == "BA"
+
+        println("\n--- CIPHER TOOLS > BACONIAN HUMANS ---")
+        include("Baconianhumans.jl")
 
     elseif text == "?"
 
