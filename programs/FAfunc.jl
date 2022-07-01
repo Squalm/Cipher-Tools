@@ -1,6 +1,6 @@
 module FAM
 
-export coincidence, fa, quadgramscore, trigramscore, bigramscore
+export coincidence, fa, quadgramscore, trigramscore, bigramscore, bigramFreqs
 
 # include("Utils.jl")
 
@@ -83,10 +83,7 @@ function trigramScore(text::String)
 
 end
 
-# Bigram analysis - ONLY WORKS FOR ENGLISH
-function bigramScore(text::String)
-
-    text = removeExtras(uppercase(text), "ABCDEFGHIJKLMNOPQRSTUVWXYZ")
+function bigramFreqs()
 
     # Read the whole file into a dictionary for easy access
     qfdict = Dict()
@@ -101,10 +98,28 @@ function bigramScore(text::String)
 
     end
 
+    return qfdict
+
+end # function
+
+function bigramScore(text::String, dict)
+
     # Score it
     return sum([
-        get(qfdict, text[i-1:i], 0) for i in range(1, length = length(text)) if i > 1
+        get(dict, text[i-1:i], 0) for i in range(1, length = length(text)) if i > 1
     ])
+
+end # function
+
+# Bigram analysis - ONLY WORKS FOR ENGLISH
+function bigramScore(text::String)
+
+    text = removeExtras(uppercase(text), "ABCDEFGHIJKLMNOPQRSTUVWXYZ")
+
+    # Read the whole file into a dictionary for easy access
+    qfdict = bigramFreqs()
+
+    return bigramScore(text, qfreq)
 
 end
 
