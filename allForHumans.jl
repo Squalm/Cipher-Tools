@@ -22,9 +22,9 @@ BRUTE FORCE
 | -> ROT13 - RO
 | -> Vignere - VI
 | -> Baconian - BA
+| -> Mono-alphabetic Substitution - MS
 | -> Rail-fence - [COMING SOON]
 | -> Polybius Square - [COMING SOON]
-| -> Simple Substitution - [COMING SOON]
 | -> Transposition - [COMING SOON]
 
 """
@@ -75,6 +75,11 @@ while true
 
         println("\n--- CIPHER TOOLS > BACONIAN HUMANS ---")
         include("Baconianhumans.jl")
+
+    elseif text == "MS"
+
+        println("\n--- CIPHER TOOLS > SUBSTITUTION HUMANS ---")
+        include("Substitutehumans.jl")
 
     elseif text == "?"
 

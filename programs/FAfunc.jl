@@ -102,11 +102,11 @@ function bigramFreqs()
 
 end # function
 
-function bigramScore(text::String, dict)
+function bigramScore(text::String, fdict)
 
     # Score it
     return sum([
-        get(dict, text[i-1:i], 0) for i in range(1, length = length(text)) if i > 1
+        get(fdict, text[i-1:i], 0) for i in range(1, length = length(text)) if i > 1
     ])
 
 end # function
@@ -119,7 +119,7 @@ function bigramScore(text::String)
     # Read the whole file into a dictionary for easy access
     qfdict = bigramFreqs()
 
-    return bigramScore(text, qfreq)
+    return bigramScore(text, qfdict)
 
 end
 

@@ -1,6 +1,6 @@
 module SubstituteM
 
-export substituteGuess
+export substituteGuess, substituteBrute, substitute
 
 using Main.UtilsM: removeExtras
 using Main.FAM: fa, bigramScore, bigramFreqs
@@ -14,7 +14,7 @@ Substitues `alphabet` for `newalphabet` in `text`.
 """
 function substitute(text::String, alphabet::String, newalphabet::String)
 
-    return join([newalphabet[findfirst(c, alphabet)] for c in text])
+    return join([get(newalphabet, findfirst(c, alphabet) !== nothing ? findfirst(c, alphabet) : 0, "") for c in text])
 
 end # function
 
@@ -30,19 +30,31 @@ N.B. This does not usually actually create recognisable text.
 """
 function substituteGuess(text::String)
 
-    alphabet = "ABCDEFGHIJKLMNOPQRSTUVWXYZ"
-    text = removeExtras(uppercase(text), alphabet)
+    text = uppercase(text)
     alphabet = join([t[1] for t in sort(collect(faComparison()), by = x -> x[2], rev = true)])
     newalphabet = join([t[1] for t in sort(collect(fa(text, alphabet)), by = x -> x[2], rev = true)])
     return (text = substitute(text, newalphabet, alphabet), freq = (alphabet, newalphabet))
 
 end # function
 
-function substituteBrute(text::String, swaps = 10000, alphabet = "ABCDEFGHIJKLMNOPQRSTUVWXYZ")
+"""
+    substituteBrute(text, [swaps, alphabet, guess])
+
+Finds the key by generating a guess (if `guess` is true)
+and then improving on it by making `swaps` swaps until
+the correct solution is reached.  
+
+Works best on long texts.
+"""
+function substituteBrute(text::String, swaps = 10000, alphabet = "ABCDEFGHIJKLMNOPQRSTUVWXYZ", guess = true)
 
     text = removeExtras(uppercase(text), alphabet)
 
-    text, freq = substituteGuess(text)
+    freq = ("", alphabet)
+
+    if guess
+        text, freq = substituteGuess(text)
+    end # if
     text = [c for c in text]
 
     # Use bigrams analysis to get a better solution
