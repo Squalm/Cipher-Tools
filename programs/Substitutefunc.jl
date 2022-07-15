@@ -10,11 +10,13 @@ using ProgressBars
 """
     substitute(text::String, alphabet::String, newalphabet::String)
 
-Substitues `alphabet` for `newalphabet` in `text`.
+Substitues `alphabet` for `newalphabet` in `text`.  
+
+N.B., assumes all characters in text are in alphabet and newalphabet
 """
 function substitute(text::String, alphabet::String, newalphabet::String)
 
-    return join([get(newalphabet, findfirst(c, alphabet) !== nothing ? findfirst(c, alphabet) : 0, "") for c in text])
+    return join([get(newalphabet, findfirst(c, alphabet), "") for c in text])
 
 end # function
 
