@@ -1,12 +1,16 @@
 module FAM
 
-export coincidence, fa, quadgramscore, trigramscore, bigramscore, bigramFreqs
+export coincidence, fa, quadgramscore, trigramscore, trigramFreqs, bigramscore, bigramFreqs
 
 # include("Utils.jl")
 
 using Main.UtilsM: removeExtras
 
-# Index of Coincidence
+"""
+    coincidence(text, alphabet)
+
+Calculates the index of coincidence of a `text` using `alphabet`.
+"""
 function coincidence(text::String, alphabet::String)
 
     refined = removeExtras(text, alphabet)
@@ -58,12 +62,13 @@ function quadgramScore(text::String)
 
 end
 
-# Trigram analysis - ONLY WORKS FOR ENGLISH
-function trigramScore(text::String)
+"""
+    trigramFreqs()
 
-    text = removeExtras(uppercase(text), "ABCDEFGHIJKLMNOPQRSTUVWXYZ")
+Returns a dictionary containing all English trigrams and their frequencies.
+"""
+function trigramFreqs()
 
-    # Read the whole file into a dictionary for easy access
     qfdict = Dict()
     open("programs\\texts\\trigrams.txt", "r") do qfreq
 
@@ -76,10 +81,33 @@ function trigramScore(text::String)
 
     end
 
-    # Score it
+    return qfdict
+
+end # function
+
+function trigramScore(text::String, fdict)
+
     return sum([
-        get(qfdict, text[i-2:i], 0) for i in range(1, length = length(text)) if i > 2
+        get(fdict, text[i-2:i], 0) for i in range(1, length = length(text)) if i > 2
     ])
+
+end
+
+"""
+    trigramScore(text, [fdict])
+
+Returns a score for `text` using the scores for trigrams in `fdict` or gets the
+frequencies for English if unspecified.
+"""
+function trigramScore(text::String)
+
+    text = removeExtras(uppercase(text), "ABCDEFGHIJKLMNOPQRSTUVWXYZ")
+
+    # Read the whole file into a dictionary for easy access
+    qfdict = trigramFreqs()
+
+    # Score it
+    return trigramScore(text, qfdict)
 
 end
 
