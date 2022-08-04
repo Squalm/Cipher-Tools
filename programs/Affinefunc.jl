@@ -10,7 +10,7 @@ using Main.FAM: fa
 function affine(text::String, alphabet::String, nMultiply::Int, nAdd::Int)
 
     return join([
-        alphabet[(findfirst(isequal(letter), alphabet)*nMultiply+nAdd+1)%length(alphabet)+1]
+        alphabet[((findfirst(isequal(letter), alphabet) - 1) * nMultiply + nAdd) % length(alphabet) + 1]
         for letter in text
     ])
 
