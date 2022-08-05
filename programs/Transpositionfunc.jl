@@ -42,6 +42,23 @@ function columnar(text, order, mode = "rr", filler = "X")
             end # 
         end # for
 
+    elseif mode == "cr"
+        out = Any[c for c in text]
+        # Pad as required
+        for i in 1:(columns - length(text) % columns) % columns
+            push!(out, filler)
+        end # for
+
+        # Split the text into evenly sized chunks
+        chunks = String[join(out[i * trunc(Int, length(out) / columns) + 1:(i+1) * trunc(Int, length(out) / columns)]) for i in 0:columns - 1]
+
+        # Read off the chunks in order
+        for i in 0:length(chunks[1]) - 1
+            for j in 1:columns
+                out[i * columns + j] = chunks[order[j]][i + 1]
+            end # for
+        end # for
+
     end # if
 
     return join(out)
